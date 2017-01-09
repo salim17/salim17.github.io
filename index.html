@@ -74,12 +74,12 @@
   background-color: #55ACEE;
   border: none;
 }
-.navbar-default .navbar-brand {
-  color: #292F33;
-}
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus {
+.navbar-default .navbar-brand > span{
   color: #fff;
+}
+.navbar-default .navbar-brand > span:hover,
+.navbar-default .navbar-brand > span:focus {
+  color: #292F33;
   background-color: transparent;
 }
 .navbar-default .navbar-nav > li > a:hover {
@@ -104,11 +104,7 @@
 }
 .navbar-brand .glyphicon{
 	font-weight: 300;
-	font-size: 24px;
-}
-.navbar-brand .glyphicon:hover{
-  font-weight: 300;
-  font-size: 24px;
+	font-size: 28px;
 }
 .dropdown-menu {
   padding: 0;
@@ -208,7 +204,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand transitionable" href="\"><span class="glyphicon glyphicon-home"></span></a>  
+    <a class="navbar-brand" href="\"><span class="glyphicon glyphicon-home transitionable"></span></a>  
   </div>
   <div class="clearfix navbar-collapse collapse" id="myNavbar">
     <ul class="nav navbar-nav">
