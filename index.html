@@ -211,6 +211,24 @@
   top: 3px;
   left: 5px;
 }
+@media (max-width: 992px) {
+  .dropdown-menu{
+    height: 400px;
+    max-height: 400px;
+    width: 100%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling:touch; // mobile safari
+  }
+}
+@media (max-width: 768px) {
+  .dropdown-menu{
+    height: 200px;
+    max-height: 200px;
+    width: 100%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling:touch; // mobile safari
+  }
+}
 /*Navbar Ends*/
 
 
@@ -326,7 +344,7 @@
                   <a href="#"><li>UPSEE</li></a>
               </div>
             </div>
-            </ul>
+           </ul>
           </li>
           <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Previous Papers<span class="glyphicon glyphicon-chevron-down"></a>
             <ul class="dropdown-menu">
