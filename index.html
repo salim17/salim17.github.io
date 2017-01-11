@@ -9,6 +9,7 @@
   <!-- FONTS -->
   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,300' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Arima+Madurai:300|Audiowide" rel="stylesheet">
 
   <!-- CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -19,6 +20,61 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <style type="text/css">
+
+/*Logo and Slogan Starts*/
+.logo {
+ color: #55ACEE;
+ font-family: 'Kaushan Script',cursive;
+ letter-spacing: 1px;
+ text-align: left;
+ padding-top: 6px;
+}
+.logo a{
+  text-decoration: none;
+  color: transparent;
+}
+.logo .ninja{
+  position: absolute !important;
+  overflow: hidden !important;
+  bottom: 1;
+}
+.logo .second{
+  color: #292F33;
+}
+.logo .second:hover{
+  color: #55ACEE;
+}
+.logo > h2 > a{
+  margin-left: 50px;
+  color: #55ACEE
+}
+
+.slogan{
+  text-align: right;
+  padding-top: 32px;
+  font-family: 'Arima Madurai', cursive;
+  font-family: 'Audiowide', cursive;
+}
+.affix {
+  top: 0;
+  width: 100%;
+}
+.affix + .container-fluid {
+  padding-top: 70px;
+}
+.side_nav.affixed,
+.main_content.affixed{
+  margin-top: 50px;
+}
+@media screen and (max-width: 992px){
+  .slogan {
+    display: none !important;
+  }
+}
+
+/*Logo and Slogan Ends*/
+
+
 
 /*Navbar Starts*/ 
         
@@ -37,9 +93,9 @@
   .navbar-brand{
     position: absolute;
     width: 100%;
-    left: 20;
+   
     margin: auto;
-    margin-left: 48%;
+   
     padding-top: 10px;
 	}
   .navbar {
@@ -64,11 +120,11 @@
   text-transform: uppercase;
   font-weight: 600;
   font-size: 14px;
-  -webkit-transition: all .4s linear;
-  -moz-transition: all .4s linear;
-  -ms-transition: all .4s linear;
-  -o-transition: all .4s linear;
-  transition: all .4s linear;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  -ms-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  transition: all .2s linear;
 }
 .navbar-default {
   background-color: #55ACEE;
@@ -168,7 +224,7 @@
 .side_nav{
   width: 230px;
   height: 100%;
-  z-index: 3;
+  z-index: -1;
   position: absolute !important;
   overflow: hidden !important;
   margin-bottom: -155px;
@@ -186,6 +242,7 @@
 } 
 .main_content{
   z-index: 5;
+  margin-bottom: -155px;
 }
 /*MainContent Ends*/
 
@@ -195,7 +252,24 @@
 
 
 <body>
-<nav class="navbar navbar-default navbar-fixed-top transitionable box_shadow" role="navigation">
+
+<div class="bg_white">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <div class="logo">
+          <span class="ninja"><img src="ninja.png" width="50" height="50"/></span><h2><a href="javascript:void(0);">Competitive<span class="second transitionable">Ninja</span></h2></a>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <div class="slogan">
+          <h5>Be Competitive, Be Ahead</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<nav class="navbar navbar-default transitionable box_shadow my_navbar" role="navigation" data-spy="affix" data-offset-top="69">
 	<div class="container-fluid">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar" aria-expanded="false" aria-controls="myNavbar">
@@ -354,7 +428,7 @@
 </div>
 </nav>
   
-<div class="side_nav bg_grey box_shadow m_t_50">
+<div class="side_nav bg_grey box_shadow">
     <h1>testq</h1>
     <h1>test</h1>
     <h1>test</h1>
@@ -374,7 +448,7 @@
 
 <div class="clearfix"></div>
 
-<div class="main_content m_t_50 p_t_0 p_l_20">  
+<div class="main_content p_t_0 p_l_20" style="border: 1px solid transparent">  
     <h1>testq</h1>
     <h1>test</h1>
     <h1>test</h1>
@@ -401,7 +475,14 @@
   
   
 </div>
-
-
+<script type="text/javascript">
+$(window).scroll(function(){
+  if ($(this).scrollTop() > 69) {
+    $('.side_nav, .main_content').addClass("affixed");
+  } else {
+    $('.side_nav, .main_content').removeClass("affixed");
+  }
+});
+</script>
 </body>
 </html>
