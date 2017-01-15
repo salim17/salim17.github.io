@@ -21,7 +21,8 @@
   <!-- SCRIPTS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+      
 <style type="text/css">
 
 /*Logo and Slogan Starts*/
@@ -296,13 +297,15 @@
 .main_content{
   z-index: -1;
 }
-
 @media (min-width: 768px) {
   .main_content{
    margin-left: 230px !important;
   }
 }
-
+.canvas_holder{
+  padding: 20px;
+  
+}
 /*Main Content Ends */
 
 </style>
@@ -630,13 +633,16 @@
   <div class="container-fluid">
     <div class="row  p_20">
       <div class="col-xs-12 col-sm-12 col-md-6">
-        <h4>Label</h4>
-        <p > Lorem Ipsum Lo Lorem Ipsum Lo Lorem Ipsum Lo Lorem Ipsum Lo Lorem Ipsum Lo</p>
+        <div class="canvas_holder">
+         <canvas id="canvas"></canvas>
+        </div>
       </div>
       <div class="col-xs-12 col-sm-12 col-md-6">
         <h4>Label</h4>
         <p style="text-align: center"> Lorem Ipsum Lo Lorem Ipsum Lo Lorem Ipsum Lo Lorem Ipsum Lo Lorem Ipsum Lo</p> 
       </div>
+      <div class="clearfix visible-lg visible-md"></div>
+      <div class="clearfix visible-sm"></div>
       <div class="col-xs-12 col-sm-12 col-md-6">
         <h4>Label</h4>
         <p style="text-align: center"> Lorem Ipsum Lo Lorem Ipsum Lo Lorem Ipsum Lo Lorem Ipsum Lo Lorem Ipsum Lo</p> 
@@ -691,5 +697,25 @@
   });
 </script>
 
+<script type="text/javascript">
+  
+
+var barChartData = {
+  labels: ["Reasoning", "Quantitative Aptitude", "English"],
+  datasets: [{
+    fillColor: "#55ACEE",
+    strokeColor: "#292F33",
+    data: [50,42,45]
+  }]
+}
+
+var index = 11;
+var ctx = document.getElementById("canvas").getContext("2d");
+var barChartDemo = new Chart(ctx).Bar(barChartData, {
+  responsive: true,
+  barValueSpacing: 25
+});
+
+  </script>
 </body>
 </html>
