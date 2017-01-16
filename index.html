@@ -97,10 +97,7 @@
   }
   .navbar-brand{
     position: absolute;
-    width: 100%;
-   
     margin: auto;
-   
     padding-top: 10px;
 	}
   .navbar {
@@ -167,6 +164,9 @@
 .navbar-brand .glyphicon{
 	font-weight: 300;
 	font-size: 28px;
+}
+.nav>li>a {
+  padding: 15px 8px;
 }
 .dropdown-menu {
   padding: 0;
@@ -236,6 +236,7 @@
     color: #292F33;
   }
 }
+
 /*Navbar Ends*/
 
 
@@ -712,7 +713,7 @@ var index = 11;
 var ctx = document.getElementById("canvas").getContext("2d");
 var barChartDemo = new Chart(ctx).Bar(barChartData, {
   responsive: true,
-  barValueSpacing: 40
+  barValueSpacing: 20
 });
 
   </script>
