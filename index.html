@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="help.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- SCRIPTS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -76,14 +77,13 @@
     display: none !important;
   }
 }
-
 /*Logo and Slogan Ends*/
 
 
 
 /*Navbar Starts*/ 
         
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .navbar-nav {
     width: 100%;
     text-align: center;
@@ -103,18 +103,10 @@
   .navbar {
     border-radius: 0px;
   }
-  .navbar-nav {
-    margin: 0px ;
-  }
-  .navbar-default .navbar-collapse{
-    border:none;
-    background-color: #55ACEE;
-    padding: 0;
-    text-align: center;
-  }
   .navbar-right {
    margin-right: 0px;
   }
+
 }
 .navbar{
   margin-bottom: 0px;
@@ -136,11 +128,12 @@
   border: none;
   z-index: 1000;
 }
-.navbar-default .navbar-brand > span{
+.navbar-default .navbar-brand > i{
   color: #fff;
+  font-size: 32px;
 }
-.navbar-default .navbar-brand > span:hover,
-.navbar-default .navbar-brand > span:focus {
+.navbar-default .navbar-brand > i:hover,
+.navbar-default .navbar-brand > i:focus {
   color: #292F33;
   background-color: transparent;
 }
@@ -164,9 +157,9 @@
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
   background-color: #292F33;
 }
-.navbar-brand .glyphicon{
-	font-weight: 300;
-	font-size: 28px;
+.navbar-nav > i {
+  font-size: 1px;
+  padding-left: 2px;
 }
 .nav > li >a {
   padding: 15px 8px;
@@ -216,11 +209,6 @@
   background-color: #292F33;
   border-color: #292F33;
 }
-.dropdown .glyphicon{
-  font-size: 14px;
-  top: 3px;
-  left: 5px;
-}
 @media (max-width: 993px) {
   .dropdown-menu{
     max-height: 400px;
@@ -229,7 +217,7 @@
     -webkit-overflow-scrolling:touch; // mobile safari
   }
 }
-@media (max-width: 769px) {
+@media (max-width: 768px) {
   .dropdown-menu{
     max-height: 200px;
     width: 100%;
@@ -243,6 +231,13 @@
    color: #fff;
    background-color: #292F33;
   }
+  /*.navbar-nav {
+    margin: 0px ;
+  }
+  .navbar-default .navbar-collapse{
+    border: none;
+    background: #292F33;
+  }*/
 }
 
 /*Navbar Ends*/
@@ -326,15 +321,11 @@
 <div class="bg_white">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-        <div class="logo">
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 logo">
           <span class="ninja"><img src="ninja.png" width="50" height="50"/></span><h2><a href="javascript:void(0);">Competitive<span class="second transitionable">Ninja</span></a></h2>
-        </div>  
       </div>
-      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-        <div class="slogan">
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 slogan">
           <h5>Be Competitive, Be Ahead</h5>
-        </div>
       </div>
     </div>
   </div>
@@ -350,11 +341,11 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home transitionable"></span></a>  
+    <a class="navbar-brand" href="#"><i class="fa fa-home" aria-hidden="true"></i></a>  
   </div>
   <div class="clearfix navbar-collapse collapse" id="myNavbar">
     <ul class="nav navbar-nav">
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Syllabus<span class="glyphicon glyphicon-chevron-down"></a>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Syllabus <i class="fa fa-caret-down" aria-hidden="true"></i></a>
             <ul class="dropdown-menu">
               <div class="container">
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
@@ -407,7 +398,7 @@
             </div>
            </ul>
           </li>
-          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Previous Papers<span class="glyphicon glyphicon-chevron-down"></a>
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Previous Papers <i class="fa fa-caret-down" aria-hidden="true"></i></a>
             <ul class="dropdown-menu">
               <div class="container">
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
@@ -460,7 +451,7 @@
             </div>
            </ul>
           </li>
-          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">cut off<span class="glyphicon glyphicon-chevron-down"></a>
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">cut off <i class="fa fa-caret-down" aria-hidden="true"></i></a>
             <ul class="dropdown-menu">
               <div class="container">
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
@@ -513,7 +504,7 @@
             </div>
            </ul>
           </li>
-          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Important Dates<span class="glyphicon glyphicon-chevron-down"></a>
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Important Dates <i class="fa fa-caret-down" aria-hidden="true"></i></a>
             <ul class="dropdown-menu">
               <div class="container">
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
@@ -567,7 +558,7 @@
            </ul>
           </li>
         <li><a href="">Subscribe</a></li>
-      <li class="navbar-right"><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <li class="navbar-right"><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a></li>
     </ul>
   </div>
 </div>
