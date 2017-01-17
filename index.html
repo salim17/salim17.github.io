@@ -181,8 +181,18 @@
 }
 .nav > li.dropdown.open .dropdown-menu {
   width: 100%;
-  left:0;
-  right:0;
+  left: 0;
+  right: 0;
+}
+.dropdown-menu > span {
+  position: absolute;
+  right: 25px;
+  color: #fff;
+  font-size: 32px;
+  cursor: pointer;
+}
+.dropdown-menu > span:hover{
+  color: #55ACEE;
 }
 .main_menu > li > a{
   padding: 8px 12px;
@@ -349,7 +359,7 @@
   <div class="clearfix navbar-collapse collapse" id="myNavbar">
     <ul class="nav navbar-nav">
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Syllabus <i class="fa fa-caret-down" aria-hidden="true"></i></a>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu"><span onclick="close_dropdown" class="transitionable">×</span>
               <div class="container">
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
                   <h3 class="p_l_10 p_b_0 m_b_0">BANKING</h3>
@@ -402,7 +412,7 @@
            </ul>
           </li>
           <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Previous Papers <i class="fa fa-caret-down" aria-hidden="true"></i></a>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu"><span onclick="close_dropdown" class="transitionable">×</span>
               <div class="container">
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
                   <h3 class="p_l_10 p_b_0 m_b_0">BANKING</h3>
@@ -455,7 +465,7 @@
            </ul>
           </li>
           <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">cut off <i class="fa fa-caret-down" aria-hidden="true"></i></a>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu"><span onclick="close_dropdown" class="transitionable">×</span>
               <div class="container">
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
                   <h3 class="p_l_10 p_b_0 m_b_0">BANKING</h3>
@@ -508,7 +518,7 @@
            </ul>
           </li>
           <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Important Dates <i class="fa fa-caret-down" aria-hidden="true"></i></a>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu"><span onclick="close_dropdown" class="transitionable">×</span>
               <div class="container">
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
                   <h3 class="p_l_10 p_b_0 m_b_0">BANKING</h3>
