@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Competitive Ninja offers users complete reference to nearly every competitive Exams in India.">
-  <title>CompetitiveNinja | Complete Preparation</title>
-  <link rel="icon" type="image/ico" href="ninja.png">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="Competitive Ninja offers users complete reference to nearly every competitive Exams in India.">
+ <title>CompetitiveNinja | Complete Preparation</title>
+ <link rel="icon" type="image/ico" href="ninja.png">
 
-  <!-- FONTS -->
-  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,300' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-  <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+ <!-- FONTS -->
+ <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,300' rel='stylesheet' type='text/css'>
+ <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+ <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="normalize.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="help.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+ <!-- CSS -->
+ <link rel="stylesheet" href="normalize.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <link rel="stylesheet" href="help.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <!-- SCRIPTS -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+ <!-- SCRIPTS -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
       
 <style type="text/css">
 
-/*Logo and Slogan Starts*/
+/* Logo and Slogan Starts */
 .logo {
  color: #55ACEE;
  font-family: 'Kaushan Script',cursive;
@@ -55,7 +55,6 @@
   margin-left: 50px;
   color: #55ACEE
 }
-
 .slogan{
   text-align: right;
   padding-top: 39px;
@@ -68,7 +67,6 @@
   top: 0;
   width: 100%;
 }
-
 .main_content.affixed{
   margin-top: 50px;
 }
@@ -76,12 +74,18 @@
   .slogan {
     display: none !important;
   }
+  .logo{
+    text-align: center;
+  }
+  .logo .ninja{
+    left: 15px;
+  }
 }
-/*Logo and Slogan Ends*/
+/* Logo and Slogan Ends */
 
 
 
-/*Navbar Starts*/ 
+/* Navbar Starts */ 
         
 @media (min-width: 768px) {
   .navbar-nav {
@@ -106,8 +110,8 @@
   .navbar-right {
    margin-right: 0px;
   }
-
 }
+
 .navbar{
   margin-bottom: 0px;
   border: none;
@@ -227,6 +231,7 @@
     max-height: 400px;
     width: 100%;
     overflow-y: auto;
+    overflow-x: hidden;
     -webkit-overflow-scrolling:touch; // mobile safari
   }
 }
@@ -253,11 +258,11 @@
   }*/
 }
 
-/*Navbar Ends*/
+/* Navbar Ends */
 
 
 
-/*SideNav Starts*/
+/* SideNav Starts */
 
 .side_nav {
   display: none;
@@ -301,7 +306,7 @@
   }
 }
 
-/*SideNav Ends*/
+/* SideNav Ends */
 
 
 
@@ -322,7 +327,7 @@
 .canvas_holder{
   border: 1px solid red;
 }
-/*Main Content Ends */
+/* Main Content Ends */
 
 </style>
 </head>
@@ -354,7 +359,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="#"><i class="fa fa-home" aria-hidden="true"></i></a>  
+    <a class="navbar-brand" href="#"><i class="fa fa-home transitionable" aria-hidden="true"></i></a>  
   </div>
   <div class="clearfix navbar-collapse collapse" id="myNavbar">
     <ul class="nav navbar-nav">
@@ -693,7 +698,6 @@
       <h1>Test</h1>
       <h1>Test</h1>
       <h1>I am</h1>
-
     </div>
   </div>
 </div>
@@ -710,8 +714,6 @@
 </script>
 
 <script type="text/javascript">
-  
-
 var barChartData = {
   labels: ["Reasoning", "Quantitative Aptitude", "English"],
   datasets: [{
@@ -727,7 +729,7 @@ var barChartDemo = new Chart(ctx).Bar(barChartData, {
   responsive: true,
   barValueSpacing: 20
 });
+</script>
 
-  </script>
 </body>
 </html>
