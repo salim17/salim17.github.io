@@ -3,7 +3,7 @@
 <head>
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <meta name="description" content="Competitive Ninja offers users complete reference to nearly every competitive Exams in India.">
- <title>CompetitiveNinja | Complete Preparation</title>
+ <title>CompetitiveNinja | The Complete Career Reference</title>
  <link rel="icon" type="image/ico" href="ninja.png">
 
  <!-- FONTS -->
@@ -67,18 +67,9 @@
   top: 0;
   width: 100%;
 }
-.main_content.affixed{
-  margin-top: 50px;
-}
 @media screen and (max-width: 992px){
   .slogan {
     display: none !important;
-  }
-  .logo{
-    text-align: center;
-  }
-  .logo .ninja{
-    left: 15px;
   }
 }
 /* Logo and Slogan Ends */
@@ -319,9 +310,12 @@
 .main_content{
   z-index: -1;
 }
+.main_content.affixed{
+  margin-top: 50px;
+}
 @media (min-width: 768px) {
   .main_content{
-   margin-left: 230px !important;
+   padding-left: 230px !important;
   }
 }
 .canvas_holder{
@@ -705,7 +699,7 @@
 
 <script type="text/javascript">
   $(window).scroll(function(){
-    if ($(this).scrollTop() > 68) {
+    if ($(this).scrollTop() > 69) {
       $('.main_content').addClass("affixed");
     } else {
       $('.main_content').removeClass("affixed");
