@@ -63,10 +63,6 @@
 .slogan h5{
   margin-bottom: 5px;
 }
-.affix {
-  top: 0;
-  width: 100%;
-}
 @media screen and (max-width: 992px){
   .slogan {
     display: none !important;
@@ -103,6 +99,9 @@
   }
 }
 
+.my_navbar{
+  width: 100%;
+}
 .navbar{
   margin-bottom: 0px;
   border: none;
@@ -240,13 +239,12 @@
    color: #fff;
    background-color: #292F33;
   }
-  /*.navbar-nav {
+  .navbar-nav {
     margin: 0px ;
   }
   .navbar-default .navbar-collapse{
     border: none;
-    background: #292F33;
-  }*/
+  }
 }
 
 /* Navbar Ends */
@@ -260,14 +258,14 @@
 }
 @media (min-width: 768px) {
   .side_nav {
-    position: absolute;
+    position: fixed;
     width: 230px;
     top: 119px;
     bottom: 0;
     left: 0;
     display: block;
     overflow-x: hidden;
-    overflow-y: auto; /* Enable Vertical scroll if needed */
+    overflow-y: hidden; /* Enable Vertical scroll if needed */
     background: #292F33;
   }
   .side_nav .imp_headings{
@@ -310,9 +308,6 @@
 .main_content{
   z-index: -1;
 }
-.main_content.affixed{
-  margin-top: 50px;
-}
 .canvas_holder{
   border: 1px solid red;
 }
@@ -345,7 +340,7 @@
 </div>
 
 
-<nav class="navbar navbar-default transitionable box_shadow my_navbar" role="navigation" data-spy="affix" data-offset-top="68">
+<nav class="navbar navbar-default transitionable box_shadow my_navbar" role="navigation" id="topnav">
 	<div class="container-fluid">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar" aria-expanded="false" aria-controls="myNavbar">
@@ -577,7 +572,7 @@
 </div>
 </nav>
 
-<div class="side_nav box_shadow">
+<div class="side_nav box_shadow" id="sidenav">
   <div class="imp_headings">
    <h3>Banking</h3>
   </div>
@@ -641,7 +636,7 @@
 </div>
 
 
-<div class="main_content">
+<div class="main_content" id="maincontent">
   <div class="container-fluid">
     <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-6">
@@ -698,14 +693,53 @@
 </div>
 
 
+
+
 <script type="text/javascript">
-  $(window).scroll(function(){
-    if ($(this).scrollTop() > 68) {
-      $('.main_content').addClass("affixed");
-    } else {
-      $('.main_content').removeClass("affixed");
+if (window.addEventListener) {
+  window.addEventListener("scroll", function () {fix_sidemenu(); });
+  window.addEventListener("resize", function () {fix_sidemenu(); });  
+  window.addEventListener("touchmove", function () {fix_sidemenu(); });  
+  window.addEventListener("load", function () {fix_sidemenu(); });
+} else if (window.attachEvent) {
+  window.attachEvent("onscroll", function () {fix_sidemenu(); });
+  window.attachEvent("onresize", function () {fix_sidemenu(); });  
+  window.attachEvent("ontouchmove", function () {fix_sidemenu(); });
+  window.attachEvent("onload", function () {fix_sidemenu(); });
+}
+function scrolltop() {
+  var top = 0;
+  if (typeof(window.pageYOffset) == "number") {
+    top = window.pageYOffset;
+  } else if (document.body && document.body.scrollTop) {
+    top = document.body.scrollTop;
+  } else if (document.documentElement && document.documentElement.scrollTop) {
+    top = document.documentElement.scrollTop;
+  }
+  return top;
+}
+function fix_sidemenu() {
+  var w, top;
+  w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+  top = scrolltop() 
+   if (w > 0) {  
+    if (top == 0) {
+      document.getElementById("sidenav").style.top = "119px";      
     }
-  });
+    if (top > 0 && top < 67) {
+      document.getElementById("sidenav").style.top = (119 - top) + "px";      
+    }
+    if (top > 67) {
+      document.getElementById("sidenav").style.top = "50px";
+      document.getElementById("maincontent").style.paddingTop = "50px";    
+      document.getElementById("topnav").style.position = "fixed";
+      document.getElementById("topnav").style.top = "0";
+    } else {
+      document.getElementById("maincontent").style.paddingTop = "0";
+      document.getElementById("topnav").style.position = "relative";
+    }
+  }
+}
 </script>
 
 <script type="text/javascript">
