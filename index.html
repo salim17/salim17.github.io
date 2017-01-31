@@ -313,14 +313,15 @@
 .main_content.affixed{
   margin-top: 50px;
 }
+.canvas_holder{
+  border: 1px solid red;
+}
 @media (min-width: 768px) {
   .main_content{
    margin-left: 230px !important;
   }
 }
-.canvas_holder{
-  border: 1px solid red;
-}
+
 /* Main Content Ends */
 
 </style>
@@ -642,7 +643,7 @@
 
 <div class="main_content">
   <div class="container-fluid">
-    <div class="row  p_20">
+    <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-6">
         <div class="canvas_holder">
          <canvas id="canvas"></canvas>
@@ -699,7 +700,7 @@
 
 <script type="text/javascript">
   $(window).scroll(function(){
-    if ($(this).scrollTop() > 69) {
+    if ($(this).scrollTop() > 68) {
       $('.main_content').addClass("affixed");
     } else {
       $('.main_content').removeClass("affixed");
