@@ -13,6 +13,9 @@
 .p_20{
   padding: 20px !important;
 }
+.p_50{
+  padding: 50px !important;
+}
 .p_l_0{
   padding-left: 0px !important;
 }
@@ -107,7 +110,7 @@
   margin:10px !important;
 }
 .bg_grey{
-  background: #f5f5f5;
+  background: #f6f6f6;
 }
 .bg_white{
   background: #fff;
