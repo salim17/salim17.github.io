@@ -325,19 +325,36 @@ body{
 .canvas_holder{
   border: 1px solid red;
 }
-.career_slogan{
-  padding: 20px 20px 8px 20px;
-  font-family: 'Kaushan Script',cursive;
-  color: #999;
+blockquote {
+  border-left: 12px solid #bbb;
   background: #f9f9f9;
+  font-style: italic;
+  color: #888;
+  padding: 20px 30px 10px 30px;
+  quotes: "\201C""\201D""\2018""\2019";
 }
-.career_slogan .large{
-  font-size: 20px;
-  margin-bottom: 6px;
+blockquote p.career_quote {
+  font-size: 18px;
 }
-.career_slogan .slogan_owner{
+blockquote p.career_quote:before { 
+    content: "\201C";
+    position: absolute;
+    left: 240px;
+    top: 115px;
+    font-weight: bold;
+    font-size: 48px;
+    color: #bbb;
+} 
+blockquote p.career_quote:after { 
+    content: "";
+}
+blockquote p.author {
   font-size: 16px;
-  margin-bottom: 0px;
+}
+@media (max-width: 768px) {
+  blockquote p.career_quote:before { 
+    left: 10px;
+  }
 }
 /* Main Content Ends */
 
@@ -649,10 +666,10 @@ body{
 <div class="main_content">
   <div class="container-fluid">
     <div class="row">
-        <div class="career_slogan">
-         <p class="large text-center"><q>Keep away from people who try to belittle your ambitions. Small people always do that, but the really great ones make you feel that you too can become great.</q></p>
-         <p class="slogan_owner text-right">&#126 Mark Twain</p>
-        </div> 
+        <blockquote class="text-center">
+         <p class="career_quote">Keep away from people who try to belittle your ambitions. Small people always do that, but the really great ones make you feel that you too can become great.</p>
+         <p class="author text-right">&#126 Mark Twain</p>
+        </blockquote> 
       <div class="col-xs-12 col-sm-12 col-md-6">
         <div class="canvas_holder">
          <canvas id="canvas"></canvas>
