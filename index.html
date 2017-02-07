@@ -275,6 +275,7 @@ body{
     top: 119px;
     bottom: 0;
     left: 0;
+    background: #fff;
     display: block;
     overflow-x: hidden;
     overflow-y: auto; /* Enable Vertical scroll if needed */
@@ -285,7 +286,7 @@ body{
     text-transform: uppercase;
     color: #4285F4;
     font-family: "Raleway";
-    font-weight: 500;
+    font-weight: 400;
     font-size: 22px;
   }
   .side_nav ul{
@@ -379,7 +380,7 @@ blockquote p.author {
 </div>
 
 
-<nav class="navbar navbar-default transitionable box_shadow my_navbar" role="navigation" data-spy="affix" data-offset-top="69">
+<nav class="navbar navbar-default transitionable box_shadow my_navbar" role="navigation" data-spy="affix" data-offset-top="68">
   <div class="container-fluid">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar" aria-expanded="false" aria-controls="myNavbar">
@@ -611,7 +612,7 @@ blockquote p.author {
 </div>
 </nav>
 
-<div class="side_nav box_shadow bg_grey">
+<div class="side_nav box_shadow">
   <h3 class="imp_headings">Banking</h3>
   <ul>
     <li><a href="#">IBPS PO</a></li>
@@ -726,7 +727,7 @@ blockquote p.author {
 
 <script type="text/javascript">
   $(window).scroll(function(){
-    if ($(this).scrollTop() > 69) {
+    if ($(this).scrollTop() > 68) {
       $('.main_content').addClass("affixed");
     } else {
       $('.main_content').removeClass("affixed");
@@ -754,3 +755,4 @@ var barChartDemo = new Chart(ctx).Bar(barChartData, {
 
 </body>
 </html>
+
