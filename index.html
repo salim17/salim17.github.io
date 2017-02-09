@@ -87,8 +87,7 @@ body{
 
 
 
-/* Navbar Starts */ 
-        
+/* Navbar Starts */     
 @media (min-width: 768px) {
   .navbar-nav {
     width: 100%;
@@ -170,7 +169,10 @@ body{
   vertical-align: top;
   font-size: 20px;
 }
-.nav > li >a {
+.show_up_arrows {
+  display: inline-block !important; 
+}
+.nav > li > a {
   padding: 15px 8px;
 }
 .dropdown-menu {
@@ -258,13 +260,11 @@ body{
     background: #333;
   }*/
 }
-
 /* Navbar Ends */
 
 
 
 /* SideNav Starts */
-
 .side_nav {
   display: none;
 }
@@ -309,12 +309,10 @@ body{
     color: #fff;
   }
 }
-
 /* SideNav Ends */
 
 
 /* Main Content Starts */
-
 .main_content{
   z-index: -1;
 }
@@ -365,7 +363,6 @@ blockquote p.author {
 
 
 <body>
-
 <div class="bg_white">
   <div class="container-fluid">
     <div class="row">
@@ -378,238 +375,236 @@ blockquote p.author {
     </div>
   </div>
 </div>
-
-
 <nav class="navbar navbar-default transitionable box_shadow my_navbar" role="navigation" data-spy="affix" data-offset-top="68">
   <div class="container-fluid">
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar" aria-expanded="false" aria-controls="myNavbar">
-      <span class="sr-only">Toggle Navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="#"><i class="fa fa-home transitionable" aria-hidden="true"></i></a>  
-  </div>
-  <div class="clearfix navbar-collapse collapse" id="myNavbar">
-    <ul class="nav navbar-nav">
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Syllabus <i class="fa fa-caret-down" aria-hidden="true"></i></a>
-            <ul class="dropdown-menu"><span onclick="close_dropdown" class="transitionable">×</span>
-              <div class="container">
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
-                  <h3 class="p_l_10 p_b_0 m_b_0">BANKING</h3>
-                  <li><a href="#">IBPS PO</a></li>
-                  <li><a href="#">IBPS SO</a></li>
-                  <li><a href="#">IBPS RRB</a></li>
-                  <li><a href="#">IBPS Clerk</a></li>
-                  <li><a href="#">SBI SO</a></li>
-                  <li><a href="#">SBI PO</a></li>
-                  <li><a href="#">SBI Clerk</a></li>
-                  <li><a href="#">RBI JE</a></li>
-                  <li><a href="#">RBI Officer</a></li>
-                  <li><a href="#">RBI Assistant</a></li>
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar" aria-expanded="false" aria-controls="myNavbar">
+        <span class="sr-only">Toggle Navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><i class="fa fa-home transitionable" aria-hidden="true"></i></a>  
+    </div>
+    <div class="clearfix navbar-collapse collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Syllabus <i class="fa fa-caret-down" aria-hidden="true"></i><i class="fa fa-caret-up hidden" aria-hidden="true"></i></a>
+          <ul class="dropdown-menu"><span class="transitionable">×</span>
+            <div class="container">
+              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
+                <h3 class="p_l_10 p_b_0 m_b_0">BANKING</h3>
+                <li><a href="#">IBPS PO</a></li>
+                <li><a href="#">IBPS SO</a></li>
+                <li><a href="#">IBPS RRB</a></li>
+                <li><a href="#">IBPS Clerk</a></li>
+                <li><a href="#">SBI SO</a></li>
+                <li><a href="#">SBI PO</a></li>
+                <li><a href="#">SBI Clerk</a></li>
+                <li><a href="#">RBI JE</a></li>
+                <li><a href="#">RBI Officer</a></li>
+                <li><a href="#">RBI Assistant</a></li>
               </div>
               <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
-                  <h3 class="p_l_10 p_b_0 m_b_0">SSC</h3>
-                  <li><a href="#">CGL</a></li>
-                  <li><a href="#">CHSL</a></li>
-                  <li><a href="#">CPO</a></li>
-                  <li><a href="#">JUNIOR ENGINEER</a></li>
-                  <li><a href="#">STENOGRAPHER</a></li>
-                  <h3 class="p_l_10 p_b_0 m_b_0">RAILWAY</h3>
-                  <li><a href="#">RRB NTPC</a></li>
-                  <li><a href="#">DMRC</a></li>  
+                <h3 class="p_l_10 p_b_0 m_b_0">SSC</h3>
+                <li><a href="#">CGL</a></li>
+                <li><a href="#">CHSL</a></li>
+                <li><a href="#">CPO</a></li>
+                <li><a href="#">JUNIOR ENGINEER</a></li>
+                <li><a href="#">STENOGRAPHER</a></li>
+                <h3 class="p_l_10 p_b_0 m_b_0">RAILWAY</h3>
+                <li><a href="#">RRB NTPC</a></li>
+                <li><a href="#">DMRC</a></li>  
               </div>
               <div class="clearfix visible-sm"></div>
-               <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
-                  <h3 class="p_l_10 p_b_0 m_b_0">ENGINEERING</h3>
-                  <li><a href="#">JEE MAINS</a></li>
-                  <li><a href="#">JEE ADVANCE</a></li>
-                  <li><a href="#">BITSAT</a></li>
-                  <li><a href="#">VITEEE</a></li>
-                  <li><a href="#">UPSEE</a></li>
-                  <li><a href="#">SRMJEEE</a></li>
+              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
+                <h3 class="p_l_10 p_b_0 m_b_0">ENGINEERING</h3>
+                <li><a href="#">JEE MAINS</a></li>
+                <li><a href="#">JEE ADVANCE</a></li>
+                <li><a href="#">BITSAT</a></li>
+                <li><a href="#">VITEEE</a></li>
+                <li><a href="#">UPSEE</a></li>
+                <li><a href="#">SRMJEEE</a></li>
               </div>
               <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
-                  <h3 class="p_l_10 p_b_0 m_b_0">UPSC</h3>
-                  <li><a href="#">CIVIL SERVICES</a></li>
-                  <li><a href="#">IES</a></li>
-                  <li><a href="#">IFS</a></li>
-                  <li><a href="#">IES/ISS</a></li>
-                  <h3 class="p_l_10 p_b_0 m_b_0">DEFENCE</h3>
-                  <li><a href="#">CDS</a></li>
-                  <li><a href="#">NDA</a></li>
-                  <li><a href="#">CAPF</a></li>
+                <h3 class="p_l_10 p_b_0 m_b_0">UPSC</h3>
+                <li><a href="#">CIVIL SERVICES</a></li>
+                <li><a href="#">IES</a></li>
+                <li><a href="#">IFS</a></li>
+                <li><a href="#">IES/ISS</a></li>
+                <h3 class="p_l_10 p_b_0 m_b_0">DEFENCE</h3>
+                <li><a href="#">CDS</a></li>
+                <li><a href="#">NDA</a></li>
+                <li><a href="#">CAPF</a></li>
               </div>
               <div class="clearfix visible-md visible-lg"></div>
               <div class="clearfix visible-sm"></div>
             </div>
-           </ul>
-          </li>
-          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Previous Papers <i class="fa fa-caret-down" aria-hidden="true"></i></a>
-            <ul class="dropdown-menu"><span onclick="close_dropdown" class="transitionable">×</span>
-              <div class="container">
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
-                  <h3 class="p_l_10 p_b_0 m_b_0">BANKING</h3>
-                  <li><a href="#">IBPS PO</a></li>
-                  <li><a href="#">IBPS SO</a></li>
-                  <li><a href="#">IBPS RRB</a></li>
-                  <li><a href="#">IBPS Clerk</a></li>
-                  <li><a href="#">SBI SO</a></li>
-                  <li><a href="#">SBI PO</a></li>
-                  <li><a href="#">SBI Clerk</a></li>
-                  <li><a href="#">RBI JE</a></li>
-                  <li><a href="#">RBI Officer</a></li>
-                  <li><a href="#">RBI Assistant</a></li>
+          </ul>
+        </li>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Previous Papers <i class="fa fa-caret-down" aria-hidden="true"></i><i class="fa fa-caret-up hidden" aria-hidden="true"></i></a>
+          <ul class="dropdown-menu"><span class="transitionable">×</span>
+            <div class="container">
+              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
+                <h3 class="p_l_10 p_b_0 m_b_0">BANKING</h3>
+                <li><a href="#">IBPS PO</a></li>
+                <li><a href="#">IBPS SO</a></li>
+                <li><a href="#">IBPS RRB</a></li>
+                <li><a href="#">IBPS Clerk</a></li>
+                <li><a href="#">SBI SO</a></li>
+                <li><a href="#">SBI PO</a></li>
+                <li><a href="#">SBI Clerk</a></li>
+                <li><a href="#">RBI JE</a></li>
+                <li><a href="#">RBI Officer</a></li>
+                <li><a href="#">RBI Assistant</a></li>
               </div>
               <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
-                  <h3 class="p_l_10 p_b_0 m_b_0">SSC</h3>
-                  <li><a href="#">CGL</a></li>
-                  <li><a href="#">CHSL</a></li>
-                  <li><a href="#">CPO</a></li>
-                  <li><a href="#">JUNIOR ENGINEER</a></li>
-                  <li><a href="#">STENOGRAPHER</a></li>
-                  <h3 class="p_l_10 p_b_0 m_b_0">RAILWAY</h3>
-                  <li><a href="#">RRB NTPC</a></li>
-                  <li><a href="#">DMRC</a></li>  
+                <h3 class="p_l_10 p_b_0 m_b_0">SSC</h3>
+                <li><a href="#">CGL</a></li>
+                <li><a href="#">CHSL</a></li>
+                <li><a href="#">CPO</a></li>
+                <li><a href="#">JUNIOR ENGINEER</a></li>
+                <li><a href="#">STENOGRAPHER</a></li>
+                <h3 class="p_l_10 p_b_0 m_b_0">RAILWAY</h3>
+                <li><a href="#">RRB NTPC</a></li>
+                <li><a href="#">DMRC</a></li>  
               </div>
               <div class="clearfix visible-sm"></div>
-               <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
-                  <h3 class="p_l_10 p_b_0 m_b_0">ENGINEERING</h3>
-                  <li><a href="#">JEE MAINS</a></li>
-                  <li><a href="#">JEE ADVANCE</a></li>
-                  <li><a href="#">BITSAT</a></li>
-                  <li><a href="#">VITEEE</a></li>
-                  <li><a href="#">UPSEE</a></li>
-                  <li><a href="#">SRMJEEE</a></li>
+              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
+                <h3 class="p_l_10 p_b_0 m_b_0">ENGINEERING</h3>
+                <li><a href="#">JEE MAINS</a></li>
+                <li><a href="#">JEE ADVANCE</a></li>
+                <li><a href="#">BITSAT</a></li>
+                <li><a href="#">VITEEE</a></li>
+                <li><a href="#">UPSEE</a></li>
+                <li><a href="#">SRMJEEE</a></li>
               </div>
               <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
-                  <h3 class="p_l_10 p_b_0 m_b_0">UPSC</h3>
-                  <li><a href="#">CIVIL SERVICES</a></li>
-                  <li><a href="#">IES</a></li>
-                  <li><a href="#">IFS</a></li>
-                  <li><a href="#">IES/ISS</a></li>
-                  <h3 class="p_l_10 p_b_0 m_b_0">DEFENCE</h3>
-                  <li><a href="#">CDS</a></li>
-                  <li><a href="#">NDA</a></li>
-                  <li><a href="#">CAPF</a></li>
+                <h3 class="p_l_10 p_b_0 m_b_0">UPSC</h3>
+                <li><a href="#">CIVIL SERVICES</a></li>
+                <li><a href="#">IES</a></li>
+                <li><a href="#">IFS</a></li>
+                <li><a href="#">IES/ISS</a></li>
+                <h3 class="p_l_10 p_b_0 m_b_0">DEFENCE</h3>
+                <li><a href="#">CDS</a></li>
+                <li><a href="#">NDA</a></li>
+                <li><a href="#">CAPF</a></li>
               </div>
               <div class="clearfix visible-md visible-lg"></div>
               <div class="clearfix visible-sm"></div>
             </div>
-           </ul>
-          </li>
-          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">cut off <i class="fa fa-caret-down" aria-hidden="true"></i></a>
-            <ul class="dropdown-menu"><span onclick="close_dropdown" class="transitionable">×</span>
-              <div class="container">
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
-                  <h3 class="p_l_10 p_b_0 m_b_0">BANKING</h3>
-                  <li><a href="#">IBPS PO</a></li>
-                  <li><a href="#">IBPS SO</a></li>
-                  <li><a href="#">IBPS RRB</a></li>
-                  <li><a href="#">IBPS Clerk</a></li>
-                  <li><a href="#">SBI SO</a></li>
-                  <li><a href="#">SBI PO</a></li>
-                  <li><a href="#">SBI Clerk</a></li>
-                  <li><a href="#">RBI JE</a></li>
-                  <li><a href="#">RBI Officer</a></li>
-                  <li><a href="#">RBI Assistant</a></li>
+          </ul>
+        </li>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">cut off <i class="fa fa-caret-down" aria-hidden="true"></i><i class="fa fa-caret-up hidden" aria-hidden="true"></i></a>
+          <ul class="dropdown-menu"><span class="transitionable">×</span>
+            <div class="container">
+              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
+                <h3 class="p_l_10 p_b_0 m_b_0">BANKING</h3>
+                <li><a href="#">IBPS PO</a></li>
+                <li><a href="#">IBPS SO</a></li>
+                <li><a href="#">IBPS RRB</a></li>
+                <li><a href="#">IBPS Clerk</a></li>
+                <li><a href="#">SBI SO</a></li>
+                <li><a href="#">SBI PO</a></li>
+                <li><a href="#">SBI Clerk</a></li>
+                <li><a href="#">RBI JE</a></li>
+                <li><a href="#">RBI Officer</a></li>
+                <li><a href="#">RBI Assistant</a></li>
               </div>
               <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
-                  <h3 class="p_l_10 p_b_0 m_b_0">SSC</h3>
-                  <li><a href="#">CGL</a></li>
-                  <li><a href="#">CHSL</a></li>
-                  <li><a href="#">CPO</a></li>
-                  <li><a href="#">JUNIOR ENGINEER</a></li>
-                  <li><a href="#">STENOGRAPHER</a></li>
-                  <h3 class="p_l_10 p_b_0 m_b_0">RAILWAY</h3>
-                  <li><a href="#">RRB NTPC</a></li>
-                  <li><a href="#">DMRC</a></li>  
+                <h3 class="p_l_10 p_b_0 m_b_0">SSC</h3>
+                <li><a href="#">CGL</a></li>
+                <li><a href="#">CHSL</a></li>
+                <li><a href="#">CPO</a></li>
+                <li><a href="#">JUNIOR ENGINEER</a></li>
+                <li><a href="#">STENOGRAPHER</a></li>
+                <h3 class="p_l_10 p_b_0 m_b_0">RAILWAY</h3>
+                <li><a href="#">RRB NTPC</a></li>
+                <li><a href="#">DMRC</a></li>  
               </div>
               <div class="clearfix visible-sm"></div>
-               <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
-                  <h3 class="p_l_10 p_b_0 m_b_0">ENGINEERING</h3>
-                  <li><a href="#">JEE MAINS</a></li>
-                  <li><a href="#">JEE ADVANCE</a></li>
-                  <li><a href="#">BITSAT</a></li>
-                  <li><a href="#">VITEEE</a></li>
-                  <li><a href="#">UPSEE</a></li>
-                  <li><a href="#">SRMJEEE</a></li>
+              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
+                <h3 class="p_l_10 p_b_0 m_b_0">ENGINEERING</h3>
+                <li><a href="#">JEE MAINS</a></li>
+                <li><a href="#">JEE ADVANCE</a></li>
+                <li><a href="#">BITSAT</a></li>
+                <li><a href="#">VITEEE</a></li>
+                <li><a href="#">UPSEE</a></li>
+                <li><a href="#">SRMJEEE</a></li>
               </div>
               <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
-                  <h3 class="p_l_10 p_b_0 m_b_0">UPSC</h3>
-                  <li><a href="#">CIVIL SERVICES</a></li>
-                  <li><a href="#">IES</a></li>
-                  <li><a href="#">IFS</a></li>
-                  <li><a href="#">IES/ISS</a></li>
-                  <h3 class="p_l_10 p_b_0 m_b_0">DEFENCE</h3>
-                  <li><a href="#">CDS</a></li>
-                  <li><a href="#">NDA</a></li>
-                  <li><a href="#">CAPF</a></li>
+                <h3 class="p_l_10 p_b_0 m_b_0">UPSC</h3>
+                <li><a href="#">CIVIL SERVICES</a></li>
+                <li><a href="#">IES</a></li>
+                <li><a href="#">IFS</a></li>
+                <li><a href="#">IES/ISS</a></li>
+                <h3 class="p_l_10 p_b_0 m_b_0">DEFENCE</h3>
+                <li><a href="#">CDS</a></li>
+                <li><a href="#">NDA</a></li>
+                <li><a href="#">CAPF</a></li>
               </div>
               <div class="clearfix visible-md visible-lg"></div>
               <div class="clearfix visible-sm"></div>
             </div>
-           </ul>
-          </li>
-          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Important Dates <i class="fa fa-caret-down" aria-hidden="true"></i></a>
-            <ul class="dropdown-menu"><span onclick="close_dropdown" class="transitionable">×</span>
-              <div class="container">
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
-                  <h3 class="p_l_10 p_b_0 m_b_0">BANKING</h3>
-                  <li><a href="#">IBPS PO</a></li>
-                  <li><a href="#">IBPS SO</a></li>
-                  <li><a href="#">IBPS RRB</a></li>
-                  <li><a href="#">IBPS Clerk</a></li>
-                  <li><a href="#">SBI SO</a></li>
-                  <li><a href="#">SBI PO</a></li>
-                  <li><a href="#">SBI Clerk</a></li>
-                  <li><a href="#">RBI JE</a></li>
-                  <li><a href="#">RBI Officer</a></li>
-                  <li><a href="#">RBI Assistant</a></li>
+          </ul>
+        </li>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Important Dates <i class="fa fa-caret-down" aria-hidden="true"></i><i class="fa fa-caret-up hidden" aria-hidden="true"></i></a>
+          <ul class="dropdown-menu"><span class="transitionable">×</span>
+            <div class="container">
+              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
+                <h3 class="p_l_10 p_b_0 m_b_0">BANKING</h3>
+                <li><a href="#">IBPS PO</a></li>
+                <li><a href="#">IBPS SO</a></li>
+                <li><a href="#">IBPS RRB</a></li>
+                <li><a href="#">IBPS Clerk</a></li>
+                <li><a href="#">SBI SO</a></li>
+                <li><a href="#">SBI PO</a></li>
+                <li><a href="#">SBI Clerk</a></li>
+                <li><a href="#">RBI JE</a></li>
+                <li><a href="#">RBI Officer</a></li>
+                <li><a href="#">RBI Assistant</a></li>
               </div>
               <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
-                  <h3 class="p_l_10 p_b_0 m_b_0">SSC</h3>
-                  <li><a href="#">CGL</a></li>
-                  <li><a href="#">CHSL</a></li>
-                  <li><a href="#">CPO</a></li>
-                  <li><a href="#">JUNIOR ENGINEER</a></li>
-                  <li><a href="#">STENOGRAPHER</a></li>
-                  <h3 class="p_l_10 p_b_0 m_b_0">RAILWAY</h3>
-                  <li><a href="#">RRB NTPC</a></li>
-                  <li><a href="#">DMRC</a></li>  
+                <h3 class="p_l_10 p_b_0 m_b_0">SSC</h3>
+                <li><a href="#">CGL</a></li>
+                <li><a href="#">CHSL</a></li>
+                <li><a href="#">CPO</a></li>
+                <li><a href="#">JUNIOR ENGINEER</a></li>
+                <li><a href="#">STENOGRAPHER</a></li>
+                <h3 class="p_l_10 p_b_0 m_b_0">RAILWAY</h3>
+                <li><a href="#">RRB NTPC</a></li>
+                <li><a href="#">DMRC</a></li>  
               </div>
               <div class="clearfix visible-sm"></div>
-               <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
-                  <h3 class="p_l_10 p_b_0 m_b_0">ENGINEERING</h3>
-                  <li><a href="#">JEE MAINS</a></li>
-                  <li><a href="#">JEE ADVANCE</a></li>
-                  <li><a href="#">BITSAT</a></li>
-                  <li><a href="#">VITEEE</a></li>
-                  <li><a href="#">UPSEE</a></li>
-                  <li><a href="#">SRMJEEE</a></li>
+              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
+                <h3 class="p_l_10 p_b_0 m_b_0">ENGINEERING</h3>
+                <li><a href="#">JEE MAINS</a></li>
+                <li><a href="#">JEE ADVANCE</a></li>
+                <li><a href="#">BITSAT</a></li>
+                <li><a href="#">VITEEE</a></li>
+                <li><a href="#">UPSEE</a></li>
+                <li><a href="#">SRMJEEE</a></li>
               </div>
               <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
-                  <h3 class="p_l_10 p_b_0 m_b_0">UPSC</h3>
-                  <li><a href="#">CIVIL SERVICES</a></li>
-                  <li><a href="#">IES</a></li>
-                  <li><a href="#">IFS</a></li>
-                  <li><a href="#">IES/ISS</a></li>
-                  <h3 class="p_l_10 p_b_0 m_b_0">DEFENCE</h3>
-                  <li><a href="#">CDS</a></li>
-                  <li><a href="#">NDA</a></li>
-                  <li><a href="#">CAPF</a></li>
+                <h3 class="p_l_10 p_b_0 m_b_0">UPSC</h3>
+                <li><a href="#">CIVIL SERVICES</a></li>
+                <li><a href="#">IES</a></li>
+                <li><a href="#">IFS</a></li>
+                <li><a href="#">IES/ISS</a></li>
+                <h3 class="p_l_10 p_b_0 m_b_0">DEFENCE</h3>
+                <li><a href="#">CDS</a></li>
+                <li><a href="#">NDA</a></li>
+                <li><a href="#">CAPF</a></li>
               </div>
               <div class="clearfix visible-md visible-lg"></div>
               <div class="clearfix visible-sm"></div>
             </div>
-           </ul>
-          </li>
+          </ul>
+        </li>
         <li><a href="">Subscribe</a></li>
-      <li class="navbar-right"><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a></li>
-    </ul>
+        <li class="navbar-right"><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a></li>
+      </ul>
+    </div>
   </div>
-</div>
 </nav>
 
 <div class="side_nav box_shadow">
