@@ -78,7 +78,7 @@ body{
   width: 100%;
 }
 .main_content.affixed{
-  margin-top: 50px;
+  padding-top: 50px;
 }
 @media screen and (max-width: 992px){
   .slogan {
@@ -383,7 +383,7 @@ blockquote p.author {
     </div>
   </div>
 </div>
-<nav class="navbar navbar-default transitionable box_shadow my_navbar" role="navigation" data-spy="affix" data-offset-top="68">
+<nav class="navbar navbar-default transitionable box_shadow my_navbar" role="navigation" data-spy="affix" data-offset-top="69">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar" aria-expanded="false" aria-controls="myNavbar">
@@ -730,7 +730,7 @@ blockquote p.author {
 
 <script type="text/javascript">
   $(window).scroll(function(){
-    if ($(this).scrollTop() > 68) {
+    if ($(this).scrollTop() >= 70) {
       $('.main_content').addClass("affixed");
     } else {
       $('.main_content').removeClass("affixed");
