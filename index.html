@@ -319,7 +319,7 @@ body{
   }
 }
 .canvas_holder{
-  border: 1px solid red;
+  border: 3px solid #aaa;
 }
 blockquote {
   border-left: 12px solid #bbb;
@@ -328,6 +328,7 @@ blockquote {
   color: #888;
   padding: 20px 30px 10px 30px;
   quotes: "\201C""\201D""\2018""\2019";
+  margin-bottom: 0px;
 }
 blockquote p.career_quote {
   font-size: 18px;
@@ -351,6 +352,40 @@ blockquote p.author {
   blockquote p.career_quote:before { 
     left: 10px;
   }
+}
+.features{
+  padding: 80px 40px 20px;
+  text-align: center;
+}
+.features > h1{
+  text-transform: uppercase;
+  margin-top: 8px;
+  font-size: 54px;
+  color: #777;
+  font-family: "Raleway";
+  font-weight: 500;
+}
+.features .features_icons > i{
+  font-size: 54px;
+  color: #4285F4;
+}
+.features > p {
+  font-size: 18px;
+  font-style: italic;
+  color: #999;
+}
+.snapshots{
+  padding: 45px 0px 40px;
+  text-align: center;
+}
+.snapshots > p{
+  font-size: 18px;
+  font-style: italic;
+  color: #777;
+  padding-top: 10px;
+}
+.img-thumbnail{
+  border: 3px solid #ddd;
 }
 /* Main Content Ends */
 
@@ -668,29 +703,60 @@ blockquote p.author {
 <div class="main_content">
   <div class="container-fluid">
     <div class="row">
-        <blockquote class="text-center">
-         <p class="career_quote">Keep away from people who try to belittle your ambitions. Small people always do that, but the really great ones make you feel that you too can become great.</p>
-         <p class="author text-right">&#126 Mark Twain</p>
-        </blockquote> 
-      <div class="col-xs-12 col-sm-12 col-md-6">
-        <div class="canvas_holder">
-         <canvas id="canvas"></canvas>
+      <blockquote class="text-center">
+       <p class="career_quote">Keep away from people who try to belittle your ambitions. Small people always do that, but the really great ones make you feel that you too can become great.</p>
+       <p class="author text-right">&#126 Mark Twain</p>
+      </blockquote> 
+
+      <div class="clearfix visible-lg visible-md"></div>
+      <div class="clearfix visible-sm"></div>
+
+      <div class="bg_white">
+        <div class="col-xs-12 col-sm-12 col-md-6">
+          <div class="features">
+            <div class="features_icons">
+              <i class="fa fa-book"></i>
+            </div>
+            <h1>Syllabus</h1>
+            <p>Be updated on what is the current Syllabus, After all "Well Begun is half done!"</p>
+          </div>
+        </div>
+        <div class="clearfix visible-sm"></div>
+        <div class="col-xs-12 col-sm-12 col-md-6">
+          <div class="snapshots">
+            <img class="img-responsive img-thumbnail" height="400" width="800" src="Capture.png" />
+            <p>Interactive charts to increase user experience</p>
+          </div>
         </div>
       </div>
-      <div class="col-xs-12 col-sm-12 col-md-6">
-        <h4>Label</h4>
-        <p style="text-align: center"> Lorem Ipsum Lo Lorem Ipsum Lo Lorem Ipsum Lo Lorem Ipsum Lo Lorem Ipsum Lo</p> 
+
+      <div class="clearfix visible-lg visible-md"></div>
+      <div class="clearfix visible-sm"></div>
+
+      <div class="bg_grey">
+        <div class="col-xs-12 col-sm-12 col-md-6">
+          <div class="snapshots">
+            <img class="img-responsive img-thumbnail" height="400" width="800" src="Capture.png" />
+            <p>Interactive charts to increase user experience</p>
+          </div>
+        </div>
+
+        <div class="clearfix visible-sm"></div>
+
+        <div class="col-xs-12 col-sm-12 col-md-6">
+          <div class="features">
+            <div class="features_icons">
+              <i class="fa fa-check-circle"></i>
+            </div>
+            <h1>cut-off</h1>
+            <p>Be updated on what is the current Syllabus, After all "Well Begun is half done!"</p>
+          </div>
+        </div>
       </div>
       <div class="clearfix visible-lg visible-md"></div>
       <div class="clearfix visible-sm"></div>
-      <div class="col-xs-12 col-sm-12 col-md-6">
-        <h4>Label</h4>
-        <p style="text-align: center"> Lorem Ipsum Lo Lorem Ipsum Lo Lorem Ipsum Lo Lorem Ipsum Lo Lorem Ipsum Lo</p> 
-      </div>
-      <div class="col-xs-12 col-sm-12 col-md-6">
-        <h4>Label</h4>
-        <p style="text-align: center"> Lorem Ipsum Lo Lorem Ipsum Lo Lorem Ipsum Lo Lorem Ipsum Lo Lorem Ipsum Lo</p> 
-      </div>
+
+
       <h1>I am </h1>
       <h1>Test</h1>
       <h1>Test</h1>
@@ -741,8 +807,8 @@ var barChartData = {
   labels: ["Reasoning", "Quantitative Aptitude", "English"],
   datasets: [{
     fillColor: "#4285F4",
-    strokeColor: "#333",
-    data: [50,42,45]
+    strokeColor: "#aaa",
+    data: [90,42,45]
   }]
 }
 
@@ -750,7 +816,7 @@ var index = 11;
 var ctx = document.getElementById("canvas").getContext("2d");
 var barChartDemo = new Chart(ctx).Bar(barChartData, {
   responsive: true,
-  barValueSpacing: 20
+  barValueSpacing: 28
 });
 </script>
 
