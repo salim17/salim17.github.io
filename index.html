@@ -1,851 +1,114 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <meta name="description" content="Competitive Ninja offers users complete reference to nearly every competitive Exams in India.">
- <title>CompetitiveNinja | The Complete Career Reference</title>
- <link rel="icon" type="image/ico" href="ninja.png">
-
- <!-- FONTS -->
- <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
- <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
- <link href='http://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,300' rel='stylesheet' type='text/css'>
- <link href='http://fonts.googleapis.com/css?family=Oswald:400,500,600,700,800,300' rel='stylesheet' type='text/css'>
- <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,300' rel='stylesheet' type='text/css'>
-
- <!-- CSS -->
- <link rel="stylesheet" href="normalize.css">
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
- <link rel="stylesheet" href="help.css">
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
- <!-- SCRIPTS -->
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
-
-
-      
-<style type="text/css">
-
-body{
- background-color: #fff;
- font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif; 
- font-size: 14px;
- position: relative;
- color: #666666;
-}
-
-/* Logo and Slogan Starts */
-.logo {
- color: #4285F4;
- font-family: 'Kaushan Script',cursive;
- letter-spacing: 1px;
- padding-top: 11px;
-}
-.logo h2{
-  margin-bottom: 5px;
-}
-.logo a{
-  text-decoration: none;
-  color: transparent;
-}
-.logo .ninja{
-  position: absolute !important;
-  overflow: hidden !important;
-  bottom: 5px;
-}
-.logo .second{
-  color: #333;
-}
-.logo .second:hover{
-  color: #4285F4;
-}
-.logo > h2 > a{
-  margin-left: 50px;
-  color: #4285F4;
-}
-.slogan{
-  text-align: right;
-  padding-top: 39px;
-  font-family: 'Audiowide', cursive;
-}
-.slogan h5{
-  margin-bottom: 5px;
-}
-.affix {
-  top: 0;
-  width: 100%;
-}
-.main_content.affixed{
-  padding-top: 50px;
-}
-@media screen and (max-width: 992px){
-  .slogan {
-    display: none !important;
-  }
-}
-/* Logo and Slogan Ends */
-
-
-
-/* Navbar Starts */     
-@media (min-width: 768px) {
-  .navbar-nav {
-    width: 100%;
-    text-align: center;
-  }
-  .navbar-nav > li {
-    float: none;
-    display: inline-block;
-  }
-  .navbar-nav > li.navbar-right {
-    float: right !important;
-  }
-  .navbar-brand{
-    position: absolute;
-    margin: auto;
-    padding-top: 10px;
-  }
-  .navbar {
-    border-radius: 0px;
-  }
-  .navbar-right {
-   margin-right: 0px;
-  }
-}
-
-.navbar{
-  margin-bottom: 0px;
-  border: none;
-}
-.navbar .navbar-nav > li > a {
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 14px;
-  -webkit-transition: all .2s linear;
-  -moz-transition: all .2s linear;
-  -ms-transition: all .2s linear;
-  -o-transition: all .2s linear;
-  transition: all .2s linear;
-}
-.navbar-default {
-  background-color: #4285F4;
-  border: none;
-  z-index: 1000;
-}
-.navbar-brand{
-  padding: 9px 15px;
-}
-.navbar-default .navbar-brand > i{
-  color: #fff;
-  font-size: 32px;
-}
-.navbar-default .navbar-brand > i:hover,
-.navbar-default .navbar-brand > i:focus {
-  color: #333;
-  background-color: transparent;
-}
-.navbar-default .navbar-nav > li > a:hover {
-  color: #fff;
-  background-color: #333;
-}
-.navbar-default .navbar-nav > li > a:focus {
-  color: #fff;
-  background-color: transparent;
-}
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus {
-  color: #fff;
-  background-color: #333;
-}
-.navbar-toggle{
-  background-color: #fff;
-}
-.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-  background-color: #333;
-}
-.fa{
-  vertical-align: top;
-  font-size: 20px;
-}
-.nav > li > a {
-  padding: 15px 8px;
-}
-.dropdown-menu {
-  padding: 0;
-  margin: 0;
-  background-color: #333;
-  border: none;
-}
-.nav > li.dropdown.open {
-  position: static;
-}
-.nav > li.dropdown.open .dropdown-menu {
-  width: 100%;
-  left: 0;
-  right: 0;
-}
-.dropdown-menu > span {
-  position: absolute;
-  right: 25px;
-  color: #fff;
-  font-size: 32px;
-  cursor: pointer;
-}
-.dropdown-menu > span:hover{
-  color: #4285F4;
-}
-.main_menu > li > a{
-  padding: 8px 12px;
-  display: block;
-  margin: 2px 0;
-  line-height: 1;
-  font-size: 14px;
-  color: #fff;
-}
-.main_menu > li > a:hover{
-  color: #fff;
-  background-color: #4285F4;
-}
-.main_menu > li > a{
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #fff;
-}
-.main_menu > h3{
-  color: #4285F4;
-}
-.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open >a:focus, .navbar-default .navbar-nav > .open > a:hover {
-  color: #fff;
-  background-color: #333;
-}
-.nav .open > li > a, .nav .open > li > a:focus, .nav .open > li > a:hover {
-  background-color: #333;
-  border-color: #333;
-}
-@media (max-width: 993px) {
-  .dropdown-menu{
-    max-height: 400px;
-    width: 100%;
-    overflow-y: auto;
-    overflow-x: hidden;
-    -webkit-overflow-scrolling:touch; // mobile safari
-  }
-}
-@media (max-width: 768px) {
-  .dropdown-menu{
-    max-height: 200px;
-    width: 100%;
-    overflow-y: auto;
-    -webkit-overflow-scrolling:touch; // mobile safari
-  }
-  .main_menu > h3{
-    color: #333;
-  }
-  .main_menu > li > a:hover{
-   color: #fff;
-   background-color: #333;
-  }
-  /*.navbar-nav {
-    margin: 0px ;
-  }
-  .navbar-default .navbar-collapse{
-    border: none;
-    background: #333;
-  }*/
-}
-/* Navbar Ends */
-
-
-
-/* SideNav Starts */
-.side_nav {
-  display: none;
-}
-@media (min-width: 768px) {
-  .side_nav {
-    position: absolute;
-    width: 230px;
-    top: 119px;
-    bottom: 0;
-    left: 0;
-    background: #fff;
-    display: block;
-    overflow-x: hidden;
-    overflow-y: auto; /* Enable Vertical scroll if needed */
-  }
-  .side_nav .imp_headings {
-    padding-left: 16px;
-    margin-bottom: 3px;
-    text-transform: uppercase;
-    color: #4285F4;
-    font-family: "Raleway";
-    font-weight: 400;
-    font-size: 22px;
-  }
-  .side_nav ul{
-    list-style: none;
-    padding: 0;
-  }
-  .side_nav ul li a{
-    color: #666666;
-    display: block;
-    padding: 2px 16px;
-    text-align: left;
-    /*color: #1d2129;*/
-    text-decoration: none;
-    text-transform: uppercase;
-    /*letter-spacing: 1px;*/
-    /*text-shadow: 1px 1px 2px rgba(0,0,0,0.3);*/
-  }
-  .side_nav ul li a:hover {
-    background-color: #4285F4;
-    color: #fff;
-  }
-}
-/* SideNav Ends */
-
-
-/* Main Content Starts */
-.main_content{
-  z-index: -1;
-}
-@media (min-width: 768px) {
-  .main_content{
-   margin-left: 230px !important;
-  }
-}
-.canvas_holder{
-  border: 3px solid #aaa;
-}
-blockquote {
-  border-left: 12px solid #bbb;
-  background: #f9f9f9;
-  font-style: italic;
-  color: #888;
-  padding: 20px 30px 10px 30px;
-  quotes: "\201C""\201D""\2018""\2019";
-  margin-bottom: 0px;
-}
-blockquote p.career_quote {
-  font-size: 18px;
-}
-blockquote p.career_quote:before { 
-    content: "\201C";
-    position: absolute;
-    left: 240px;
-    top: 115px;
-    font-weight: bold;
-    font-size: 48px;
-    color: #bbb;
-} 
-blockquote p.career_quote:after { 
-    content: "";
-}
-blockquote p.author {
-  font-size: 16px;
-}
-@media (max-width: 768px) {
-  blockquote p.career_quote:before { 
-    left: 10px;
-  }
-}
-.features{
-  padding: 110px 10px 20px;
-  text-align: center;
-}
-.features > h1{
-  text-transform: uppercase;
-  margin-top: 8px;
-  font-size: 54px;
-  color: #777;
-  font-family: "Raleway";
-  font-weight: 500;
-}
-.features .features_icons > i{
-  font-size: 54px;
-  color: #4285F4;
-}
-.features > p {
-  font-size: 18px;
-  font-style: italic;
-  color: #999;
-}
-.img-thumbnail{
-  border: 3px solid #ddd;
-}
-.snapshot{
-  padding: 50px 10px 60px;
-  text-align: center;
-}
-.snapshot > p {
-  font-size: 18px;
-  font-style: italic;
-  color: #999;
-}
-@media(max-width: 993px){
-  .features {
-    padding: 80px 10px 40px;
-  }
-  .snapshot{
-    padding: 20px 10px 5px;
-  }
-  .features .features_icons > i {
-    font-size: 44px;
-  }
-  .features > p{
-    font-size: 16px;
-  }
-  .features > h1{
-    font-size: 44px;
-  }
-}
-/* Main Content Ends */
-
-
-
-
-
-
-.dont_show_arrows{
-  display: none;
-}
-
-</style>
+    <title></title>
 </head>
 
-
-
 <body>
-<div class="bg_white">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 logo">
-          <span class="ninja"><img src="ninja.png" width="50" height="50"/></span><h2><a href="javascript:void(0);">Competitive<span class="second transitionable">Ninja</span></a></h2>
-      </div>
-      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 slogan">
-          <h5>Be Competitive, Be Ahead</h5>
-      </div>
-      <div class="clearfix visible-sm"></div>
-    </div>
-  </div>
-</div>
-
-<div class="clearfix visible-sm"></div>
-<div class="clearfix visible-md visible-lg"></div>
-
-<nav class="navbar navbar-default transitionable my_navbar box_shadow" role="navigation" data-spy="affix" data-offset-top="69">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar" aria-expanded="false" aria-controls="myNavbar">
-        <span class="sr-only">Toggle Navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#"><i class="fa fa-home transitionable" aria-hidden="true"></i></a>  
-    </div>
-    <div class="clearfix navbar-collapse collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Syllabus <i class="fa fa-caret-down" aria-hidden="true"></i><i class="fa fa-caret-up dont_show_arrows" aria-hidden="true"></i></a>
-          <ul class="dropdown-menu"><span class="transitionable">×</span>
-            <div class="container">
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
-                <h3 class="p_l_10 p_b_0 m_b_0">BANKING</h3>
-                <li><a href="#">IBPS PO</a></li>
-                <li><a href="#">IBPS SO</a></li>
-                <li><a href="#">IBPS RRB</a></li>
-                <li><a href="#">IBPS Clerk</a></li>
-                <li><a href="#">SBI SO</a></li>
-                <li><a href="#">SBI PO</a></li>
-                <li><a href="#">SBI Clerk</a></li>
-                <li><a href="#">RBI JE</a></li>
-                <li><a href="#">RBI Officer</a></li>
-                <li><a href="#">RBI Assistant</a></li>
-              </div>
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
-                <h3 class="p_l_10 p_b_0 m_b_0">SSC</h3>
-                <li><a href="#">CGL</a></li>
-                <li><a href="#">CHSL</a></li>
-                <li><a href="#">CPO</a></li>
-                <li><a href="#">JUNIOR ENGINEER</a></li>
-                <li><a href="#">STENOGRAPHER</a></li>
-                <h3 class="p_l_10 p_b_0 m_b_0">RAILWAY</h3>
-                <li><a href="#">RRB NTPC</a></li>
-                <li><a href="#">DMRC</a></li>  
-              </div>
-              <div class="clearfix visible-sm"></div>
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
-                <h3 class="p_l_10 p_b_0 m_b_0">ENGINEERING</h3>
-                <li><a href="#">JEE MAINS</a></li>
-                <li><a href="#">JEE ADVANCE</a></li>
-                <li><a href="#">BITSAT</a></li>
-                <li><a href="#">VITEEE</a></li>
-                <li><a href="#">UPSEE</a></li>
-                <li><a href="#">SRMJEEE</a></li>
-              </div>
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
-                <h3 class="p_l_10 p_b_0 m_b_0">UPSC</h3>
-                <li><a href="#">CIVIL SERVICES</a></li>
-                <li><a href="#">IES</a></li>
-                <li><a href="#">IFS</a></li>
-                <li><a href="#">IES/ISS</a></li>
-                <h3 class="p_l_10 p_b_0 m_b_0">DEFENCE</h3>
-                <li><a href="#">CDS</a></li>
-                <li><a href="#">NDA</a></li>
-                <li><a href="#">CAPF</a></li>
-              </div>
-              <div class="clearfix visible-md visible-lg"></div>
-              <div class="clearfix visible-sm"></div>
+    <div>
+        <div>
+            <div id="container" style="width: 300px; height: 300px;" data-highcharts-chart="0">
+                <div id="highcharts-0" style="position: relative; overflow: hidden; width: 300px; height: 300px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                    <svg version="1.1" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif;font-size:12px;" xmlns="http://www.w3.org/2000/svg" width="300" height="300">
+                        <desc>Created with Highcharts 4.1.9</desc>
+                        <defs>
+                            <clipPath id="highcharts-1">
+                                <rect x="0" y="0" width="216" height="191"></rect>
+                            </clipPath>
+                        </defs>
+                        <rect x="0" y="0" width="300" height="300" strokeWidth="0" fill="#FFFFFF"></rect>
+                        <g zIndex="1"></g>
+                        <g zIndex="1">
+                            <path fill="none" d="M 74 244.5 L 290 244.5" stroke="#D8D8D8" stroke-width="1" zIndex="1" opacity="1"></path>
+                            <path fill="none" d="M 74 196.5 L 290 196.5" stroke="#D8D8D8" stroke-width="1" zIndex="1" opacity="1"></path>
+                            <path fill="none" d="M 74 149.5 L 290 149.5" stroke="#D8D8D8" stroke-width="1" zIndex="1" opacity="1"></path>
+                            <path fill="none" d="M 74 101.5 L 290 101.5" stroke="#D8D8D8" stroke-width="1" zIndex="1" opacity="1"></path>
+                            <path fill="none" d="M 74 52.5 L 290 52.5" stroke="#D8D8D8" stroke-width="1" zIndex="1" opacity="1"></path>
+                        </g>
+                        <g zIndex="2">
+                            <path fill="none" d="M 181.5 244 L 181.5 254" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                            <path fill="none" d="M 74 244.5 L 290 244.5" stroke="#C0D0E0" stroke-width="1" zIndex="7" visibility="visible"></path>
+                        </g>
+                        <g zIndex="2">
+                            <text x="28.09375" zIndex="7" text-anchor="middle" transform="translate(0,0) rotate(270 28.09375 148.5)" style="color:#000;font-weight:bold;fill:#000;" visibility="visible" y="148.5">
+                                <tspan>Credit points</tspan>
+                            </text>
+                        </g>
+                        <g zIndex="3">
+                            <g visibility="visible" zIndex="0.1" transform="translate(74,53) scale(1 1)" style="" clip-path="url(#highcharts-1)">
+                                <rect x="48" y="155" width="35" height="37" fill="#C3A447" rx="0" ry="0"></rect>
+                            </g>
+                            <g visibility="visible" zIndex="0.1" transform="translate(74,53) scale(1 1)" clip-path="none"></g>
+                            <g visibility="visible" zIndex="0.1" transform="translate(74,53) scale(1 1)" style="" clip-path="url(#highcharts-1)">
+                                <rect x="91" y="192" width="35" height="0" fill="#3BD5AF" rx="0" ry="0"></rect>
+                            </g>
+                            <g visibility="visible" zIndex="0.1" transform="translate(74,53) scale(1 1)" clip-path="none"></g>
+                            <g visibility="visible" zIndex="0.1" transform="translate(74,53) scale(1 1)" style="" clip-path="url(#highcharts-1)">
+                                <rect x="134" y="28" width="35" height="164" fill="#BD55E6" rx="0" ry="0"></rect>
+                            </g>
+                            <g visibility="visible" zIndex="0.1" transform="translate(74,53) scale(1 1)" clip-path="none"></g>
+                        </g>
+                        <text x="150" text-anchor="middle" zIndex="4" style="color:#333333;font-size:18px;fill:#333333;width:236px;" y="24">
+                            <tspan>Leader Board</tspan>
+                        </text>
+                        <g zIndex="7" transform="translate(26,256)">
+                            <g zIndex="1">
+                                <g>
+                                    <g zIndex="1" transform="translate(8,3)">
+                                        <text x="21" style="color:#333333;font-size:12px;font-weight:bold;cursor:pointer;fill:#333333;" text-anchor="start" zIndex="2" y="15">Average</text>
+                                        <rect x="0" y="4" width="16" height="12" zIndex="3" fill="#C3A447"></rect>
+                                    </g>
+                                    <g zIndex="1" transform="translate(99.625,3)">
+                                        <text x="21" y="15" style="color:#333333;font-size:12px;font-weight:bold;cursor:pointer;fill:#333333;" text-anchor="start" zIndex="2">Your</text>
+                                        <rect x="0" y="4" width="16" height="12" zIndex="3" fill="#3BD5AF"></rect>
+                                    </g>
+                                    <g zIndex="1" transform="translate(170.640625,3)">
+                                        <text x="21" y="15" style="color:#333333;font-size:12px;font-weight:bold;cursor:pointer;fill:#333333;" text-anchor="start" zIndex="2">Highest</text>
+                                        <rect x="0" y="4" width="16" height="12" zIndex="3" fill="#BD55E6"></rect>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                        <g zIndex="7"></g>
+                        <g zIndex="7">
+                            <text x="59" style="color:#606060;cursor:default;font-size:11px;fill:#606060;width:89px;text-overflow:clip;" text-anchor="end" transform="translate(0,0)" y="247" opacity="1">0</text>
+                            <text x="59" style="color:#606060;cursor:default;font-size:11px;fill:#606060;width:89px;text-overflow:clip;" text-anchor="end" transform="translate(0,0)" y="199" opacity="1">100</text>
+                            <text x="59" style="color:#606060;cursor:default;font-size:11px;fill:#606060;width:89px;text-overflow:clip;" text-anchor="end" transform="translate(0,0)" y="151" opacity="1">200</text>
+                            <text x="59" style="color:#606060;cursor:default;font-size:11px;fill:#606060;width:89px;text-overflow:clip;" text-anchor="end" transform="translate(0,0)" y="103" opacity="1">300</text>
+                            <text x="59" style="color:#606060;cursor:default;font-size:11px;fill:#606060;width:89px;text-overflow:clip;" text-anchor="end" transform="translate(0,0)" y="56" opacity="1">400</text>
+                        </g>
+                        <g zIndex="8" style="cursor:default;padding:0;pointer-events:none;white-space:nowrap;" transform="translate(51,-9999)" opacity="0" visibility="visible">
+                            <path fill="none" d="M 3.5 0.5 L 174.5 0.5 C 177.5 0.5 177.5 0.5 177.5 3.5 L 177.5 125.5 C 177.5 128.5 177.5 128.5 174.5 128.5 L 3.5 128.5 C 0.5 128.5 0.5 128.5 0.5 125.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5" isShadow="true" stroke="black" stroke-opacity="0.049999999999999996" stroke-width="5" transform="translate(1, 1)" width="177" height="128"></path>
+                            <path fill="none" d="M 3.5 0.5 L 174.5 0.5 C 177.5 0.5 177.5 0.5 177.5 3.5 L 177.5 125.5 C 177.5 128.5 177.5 128.5 174.5 128.5 L 3.5 128.5 C 0.5 128.5 0.5 128.5 0.5 125.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5" isShadow="true" stroke="black" stroke-opacity="0.09999999999999999" stroke-width="3" transform="translate(1, 1)" width="177" height="128"></path>
+                            <path fill="none" d="M 3.5 0.5 L 174.5 0.5 C 177.5 0.5 177.5 0.5 177.5 3.5 L 177.5 125.5 C 177.5 128.5 177.5 128.5 174.5 128.5 L 3.5 128.5 C 0.5 128.5 0.5 128.5 0.5 125.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5" isShadow="true" stroke="black" stroke-opacity="0.15" stroke-width="1" transform="translate(1, 1)" width="177" height="128"></path>
+                            <path fill="rgba(249, 249, 249, .85)" d="M 3.5 0.5 L 174.5 0.5 C 177.5 0.5 177.5 0.5 177.5 3.5 L 177.5 125.5 C 177.5 128.5 177.5 128.5 174.5 128.5 L 3.5 128.5 C 0.5 128.5 0.5 128.5 0.5 125.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5" stroke="#C3A447" stroke-width="1"></path>
+                        </g>
+                        <text x="290" text-anchor="end" zIndex="8" style="cursor:pointer;color:#909090;font-size:9px;fill:#909090;" y="295"></text>
+                    </svg>
+                    <div style="position: absolute; left: 51px; top: -9999px; opacity: 0; visibility: visible;"><span style="position: absolute; font-family: &quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif; font-size: 12px; white-space: nowrap; color: rgb(51, 51, 51); margin-left: 0px; margin-top: 0px; left: 8px; top: 8px;" zindex="1"><span style="font-size:10px;fontWeight:bold"></span>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="color:#C3A447;padding:0;border:1px solid #ccc;fontWeight:bold;font-size:12px"><b>Average:</b> </td>
+                                    <td style="padding:0;border:1px solid #ccc;fontWeight:bold;font-size:12px"><b>77.0</b></td>
+                                </tr>
+                                <tr>
+                                    <td style="color:#3BD5AF;padding:0;border:1px solid #ccc;fontWeight:bold;font-size:12px"><b>Your:</b> </td>
+                                    <td style="padding:0;border:1px solid #ccc;fontWeight:bold;font-size:12px"><b>0.0</b></td>
+                                </tr>
+                                <tr>
+                                    <td style="color:#BD55E6;padding:0;border:1px solid #ccc;fontWeight:bold;font-size:12px"><b>Highest:</b> </td>
+                                    <td style="padding:0;border:1px solid #ccc;fontWeight:bold;font-size:12px"><b>343.0</b></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </span>
+                    </div>
+                </div>
             </div>
-          </ul>
-        </li>
-        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Previous Papers <i class="fa fa-caret-down" aria-hidden="true"></i><i class="fa fa-caret-up dont_show_arrows" aria-hidden="true"></i></a>
-          <ul class="dropdown-menu"><span class="transitionable">×</span>
-            <div class="container">
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
-                <h3 class="p_l_10 p_b_0 m_b_0">BANKING</h3>
-                <li><a href="#">IBPS PO</a></li>
-                <li><a href="#">IBPS SO</a></li>
-                <li><a href="#">IBPS RRB</a></li>
-                <li><a href="#">IBPS Clerk</a></li>
-                <li><a href="#">SBI SO</a></li>
-                <li><a href="#">SBI PO</a></li>
-                <li><a href="#">SBI Clerk</a></li>
-                <li><a href="#">RBI JE</a></li>
-                <li><a href="#">RBI Officer</a></li>
-                <li><a href="#">RBI Assistant</a></li>
-              </div>
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
-                <h3 class="p_l_10 p_b_0 m_b_0">SSC</h3>
-                <li><a href="#">CGL</a></li>
-                <li><a href="#">CHSL</a></li>
-                <li><a href="#">CPO</a></li>
-                <li><a href="#">JUNIOR ENGINEER</a></li>
-                <li><a href="#">STENOGRAPHER</a></li>
-                <h3 class="p_l_10 p_b_0 m_b_0">RAILWAY</h3>
-                <li><a href="#">RRB NTPC</a></li>
-                <li><a href="#">DMRC</a></li>  
-              </div>
-              <div class="clearfix visible-sm"></div>
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
-                <h3 class="p_l_10 p_b_0 m_b_0">ENGINEERING</h3>
-                <li><a href="#">JEE MAINS</a></li>
-                <li><a href="#">JEE ADVANCE</a></li>
-                <li><a href="#">BITSAT</a></li>
-                <li><a href="#">VITEEE</a></li>
-                <li><a href="#">UPSEE</a></li>
-                <li><a href="#">SRMJEEE</a></li>
-              </div>
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
-                <h3 class="p_l_10 p_b_0 m_b_0">UPSC</h3>
-                <li><a href="#">CIVIL SERVICES</a></li>
-                <li><a href="#">IES</a></li>
-                <li><a href="#">IFS</a></li>
-                <li><a href="#">IES/ISS</a></li>
-                <h3 class="p_l_10 p_b_0 m_b_0">DEFENCE</h3>
-                <li><a href="#">CDS</a></li>
-                <li><a href="#">NDA</a></li>
-                <li><a href="#">CAPF</a></li>
-              </div>
-              <div class="clearfix visible-md visible-lg"></div>
-              <div class="clearfix visible-sm"></div>
-            </div>
-          </ul>
-        </li>
-        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">cut off <i class="fa fa-caret-down" aria-hidden="true"></i><i class="fa fa-caret-up dont_show_arrows" aria-hidden="true"></i></a>
-          <ul class="dropdown-menu"><span class="transitionable">×</span>
-            <div class="container">
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
-                <h3 class="p_l_10 p_b_0 m_b_0">BANKING</h3>
-                <li><a href="#">IBPS PO</a></li>
-                <li><a href="#">IBPS SO</a></li>
-                <li><a href="#">IBPS RRB</a></li>
-                <li><a href="#">IBPS Clerk</a></li>
-                <li><a href="#">SBI SO</a></li>
-                <li><a href="#">SBI PO</a></li>
-                <li><a href="#">SBI Clerk</a></li>
-                <li><a href="#">RBI JE</a></li>
-                <li><a href="#">RBI Officer</a></li>
-                <li><a href="#">RBI Assistant</a></li>
-              </div>
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
-                <h3 class="p_l_10 p_b_0 m_b_0">SSC</h3>
-                <li><a href="#">CGL</a></li>
-                <li><a href="#">CHSL</a></li>
-                <li><a href="#">CPO</a></li>
-                <li><a href="#">JUNIOR ENGINEER</a></li>
-                <li><a href="#">STENOGRAPHER</a></li>
-                <h3 class="p_l_10 p_b_0 m_b_0">RAILWAY</h3>
-                <li><a href="#">RRB NTPC</a></li>
-                <li><a href="#">DMRC</a></li>  
-              </div>
-              <div class="clearfix visible-sm"></div>
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
-                <h3 class="p_l_10 p_b_0 m_b_0">ENGINEERING</h3>
-                <li><a href="#">JEE MAINS</a></li>
-                <li><a href="#">JEE ADVANCE</a></li>
-                <li><a href="#">BITSAT</a></li>
-                <li><a href="#">VITEEE</a></li>
-                <li><a href="#">UPSEE</a></li>
-                <li><a href="#">SRMJEEE</a></li>
-              </div>
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
-                <h3 class="p_l_10 p_b_0 m_b_0">UPSC</h3>
-                <li><a href="#">CIVIL SERVICES</a></li>
-                <li><a href="#">IES</a></li>
-                <li><a href="#">IFS</a></li>
-                <li><a href="#">IES/ISS</a></li>
-                <h3 class="p_l_10 p_b_0 m_b_0">DEFENCE</h3>
-                <li><a href="#">CDS</a></li>
-                <li><a href="#">NDA</a></li>
-                <li><a href="#">CAPF</a></li>
-              </div>
-              <div class="clearfix visible-md visible-lg"></div>
-              <div class="clearfix visible-sm"></div>
-            </div>
-          </ul>
-        </li>
-        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Important Dates <i class="fa fa-caret-down" aria-hidden="true"></i><i class="fa fa-caret-up dont_show_arrows" aria-hidden="true"></i></a>
-          <ul class="dropdown-menu"><span class="transitionable">×</span>
-            <div class="container">
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
-                <h3 class="p_l_10 p_b_0 m_b_0">BANKING</h3>
-                <li><a href="#">IBPS PO</a></li>
-                <li><a href="#">IBPS SO</a></li>
-                <li><a href="#">IBPS RRB</a></li>
-                <li><a href="#">IBPS Clerk</a></li>
-                <li><a href="#">SBI SO</a></li>
-                <li><a href="#">SBI PO</a></li>
-                <li><a href="#">SBI Clerk</a></li>
-                <li><a href="#">RBI JE</a></li>
-                <li><a href="#">RBI Officer</a></li>
-                <li><a href="#">RBI Assistant</a></li>
-              </div>
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
-                <h3 class="p_l_10 p_b_0 m_b_0">SSC</h3>
-                <li><a href="#">CGL</a></li>
-                <li><a href="#">CHSL</a></li>
-                <li><a href="#">CPO</a></li>
-                <li><a href="#">JUNIOR ENGINEER</a></li>
-                <li><a href="#">STENOGRAPHER</a></li>
-                <h3 class="p_l_10 p_b_0 m_b_0">RAILWAY</h3>
-                <li><a href="#">RRB NTPC</a></li>
-                <li><a href="#">DMRC</a></li>  
-              </div>
-              <div class="clearfix visible-sm"></div>
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
-                <h3 class="p_l_10 p_b_0 m_b_0">ENGINEERING</h3>
-                <li><a href="#">JEE MAINS</a></li>
-                <li><a href="#">JEE ADVANCE</a></li>
-                <li><a href="#">BITSAT</a></li>
-                <li><a href="#">VITEEE</a></li>
-                <li><a href="#">UPSEE</a></li>
-                <li><a href="#">SRMJEEE</a></li>
-              </div>
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
-                <h3 class="p_l_10 p_b_0 m_b_0">UPSC</h3>
-                <li><a href="#">CIVIL SERVICES</a></li>
-                <li><a href="#">IES</a></li>
-                <li><a href="#">IFS</a></li>
-                <li><a href="#">IES/ISS</a></li>
-                <h3 class="p_l_10 p_b_0 m_b_0">DEFENCE</h3>
-                <li><a href="#">CDS</a></li>
-                <li><a href="#">NDA</a></li>
-                <li><a href="#">CAPF</a></li>
-              </div>
-              <div class="clearfix visible-md visible-lg"></div>
-              <div class="clearfix visible-sm"></div>
-            </div>
-          </ul>
-        </li>
-        <li><a href="">Subscribe</a></li>
-        <li class="navbar-right"><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<div class="side_nav box_shadow">
-  <h3 class="imp_headings">Banking</h3>
-  <ul>
-    <li><a href="#">IBPS PO</a></li>
-    <li><a href="#">IBPS SO</a></li>
-    <li><a href="#">IBPS RRB</a></li>
-    <li><a href="#">IBPS Clerk</a></li>
-    <li><a href="#">SBI PO</a></li>
-    <li><a href="#">SBI SO</a></li>
-    <li><a href="#">SBI Clerk</a></li>
-    <li><a href="#">RBI JE</a></li>
-    <li><a href="#">RBI Officer</a></li>
-    <li><a href="#">RBI Asistant</a></li>
-  </ul>
-   <h3 class="imp_headings">ssc</h3>
-  <ul>
-    <li><a href="#">cgl</a></li>
-    <li><a href="#">chsl</a></li>
-    <li><a href="#">cpo</a></li>
-    <li><a href="#">Junior Engineer</a></li>
-    <li><a href="#">Stenographer</a></li>
-  </ul>
-   <h3 class="imp_headings">railway</h3>
-  <ul>
-    <li><a href="#">rrb ntpc</a></li>
-    <li><a href="#">dmrc</a></li>
-  </ul>
-   <h3 class="imp_headings">UPSC</h3>
-  <ul>
-    <li><a href="#">civil services</a></li>
-    <li><a href="#">Ies</a></li>
-    <li><a href="#">Ifs</a></li>
-    <li><a href="#">Ies/iss</a></li>
-  </ul>
-   <h3 class="imp_headings">Defence</h3>
-  <ul>
-    <li><a href="#">cds</a></li>
-    <li><a href="#">nda</a></li>
-    <li><a href="#">capf</a></li>
-  </ul>
-   <h3 class="imp_headings">Engineering</h3>
-  <ul>
-    <li><a href="https://fb.com">jee mains</a></li>
-    <li><a href="#">jee advance</a></li>
-    <li><a href="#">bitsat</a></li>
-    <li><a href="#">viteee</a></li>
-    <li><a href="#">upsee</a></li>
-    <li><a href="#">srmjeee</a></li>
-  </ul>
-</div>
-
-
-<div class="main_content">
-  <div class="container-fluid">
-    <div class="row">
-        <blockquote class="text-center">
-         <p class="career_quote">Keep away from people who try to belittle your ambitions. Small people always do that, but the really great ones make you feel that you too can become great.</p>
-         <p class="author text-right">&#126 Mark Twain</p>
-        </blockquote>
-    </div>
-  </div> 
-
-<div class="bg_white">
-  <div class="container-fluid">
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-6 features">
-          <div class="features_icons">
-           <i class="fa fa-book"></i>
-          </div>
-          <h1>Syllabus</h1>
-          <p>Be updated on what is the current Syllabus, After all "Well Begun is half done!"</p>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-6 snapshot">
-          <img class="img-responsive img-thumbnail" src="1.jpg" />
-          <p>Interactive charts to increase user experience</p>
+            <!--<div class="rightContinr1A1 crdtPnts">Threshold credit points required for progression - <span class="vboldcnt" id="leaderTotalpoint"></span></div>-->
         </div>
     </div>
-  </div>
-</div>
-
-<div class="bg_grey">
-  <div class="container-fluid">
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-6 snapshot">
-          <img class="img-responsive img-thumbnail" src="Capture.PNG" />
-          <p>Interactive charts to increase user experience</p>
-        </div>
-
-        <div class="col-xs-12 col-sm-12 col-md-6 features">
-          <div class="features_icons">
-           <i class="fa fa-check-circle"></i>
-          </div>
-          <h1>Cut-off</h1>
-          <p>Be updated on what is the current Syllabus, After all "Well Begun is half done!"</p>
-        </div>
-
-    </div>
-  </div>
-</div>  
-
-
-
-      <h1>I am </h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>I am</h1>
-    </div>
-  </div>
-</div>
-
-
-<script type="text/javascript">
-  $(window).scroll(function(){
-    if ($(this).scrollTop() >= 69) {
-      $('.main_content').addClass("affixed");
-    } else {
-      $('.main_content').removeClass("affixed");
-    }
-  });
-</script>
-
-<script type="text/javascript">
-var barChartData = {
-  labels: ["Reasoning", "Quantitative Aptitude", "English"],
-  datasets: [{
-    fillColor: "#4285F4",
-    strokeColor: "#aaa",
-    data: [90,42,45]
-  }]
-}
-
-var index = 11;
-var ctx = document.getElementById("canvas").getContext("2d");
-var barChartDemo = new Chart(ctx).Bar(barChartData, {
-  responsive: true,
-  barValueSpacing: 28
-});
-</script>
-
- <script type="text/javascript">
-  var lists = document.querySelectorAll(".navbar-nav > li > a");
-  
-  for(var i = 0; i < lists.length - 2; i++){
-    lists[i].addEventListener("click", function(){
-      this.children[0].classList.toggle('dont_show_arrows');
-      this.children[1].classList.toggle('dont_show_arrows');
-    }, false);
-  };
-</script>
-
-
 </body>
-</html>
 
+</html>
