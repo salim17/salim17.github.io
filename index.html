@@ -77,9 +77,6 @@ body{
   top: 0;
   width: 100%;
 }
-.main_content.affixed{
-  padding-top: 50px;
-}
 @media screen and (max-width: 992px){
   .slogan {
     display: none !important;
@@ -314,8 +311,6 @@ body{
 /* Main Content Starts */
 .main_content{
   z-index: -1;
-  margin-bottom: -50px;
-  
 }
 @media (min-width: 768px) {
   .main_content{
@@ -442,7 +437,7 @@ blockquote p.author {
     </div>
   </div>
 </div>
-<nav class="navbar navbar-default transitionable my_navbar box_shadow" role="navigation" data-spy="affix" data-offset-top="69">
+<nav class="navbar navbar-default transitionable my_navbar box_shadow" role="navigation" data-spy="affix" data-offset-top="68">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar" aria-expanded="false" aria-controls="myNavbar">
@@ -726,7 +721,7 @@ blockquote p.author {
 </div>
 
 
-<div class="main_content">
+<div class="main_content" id="mainContent">
   <div class="container-fluid">
     <div class="row">
         <blockquote class="text-center">
@@ -806,50 +801,49 @@ blockquote p.author {
       <h1>Test</h1>
       <h1>Test</h1>
       <h1>I am</h1>
-    </div>
-  </div>
 </div>
 
 
-<script type="text/javascript">
-  $(window).scroll(function(){
-    if ($(this).scrollTop() >= 69) {
-      $('.main_content').addClass("affixed");
-    } else {
-      $('.main_content').removeClass("affixed");
-    }
-  });
-</script>
 
 <script type="text/javascript">
-var barChartData = {
-  labels: ["Reasoning", "Quantitative Aptitude", "English"],
-  datasets: [{
-    fillColor: "#4285F4",
-    strokeColor: "#aaa",
-    data: [90,42,45]
-  }]
+if (window.addEventListener) {  
+  window.addEventListener("scroll", function () {fixMaincontent(); });
+} else if (window.attachEvent) {
+  window.attachEvent("onscroll", function () {fixMaincontent(); });
 }
 
-var index = 11;
-var ctx = document.getElementById("canvas").getContext("2d");
-var barChartDemo = new Chart(ctx).Bar(barChartData, {
-  responsive: true,
-  barValueSpacing: 28
-});
-</script>
+function fixMaincontent() {
+  var top;
+  top = scrolltop()
+  console.log(top);   
+  if (top == 0) {
+    document.getElementById("mainContent").style.paddingTop = "0px";      
+  }
+  if (top > 0 && top <= 68) {
+    document.getElementById("mainContent").style.paddingTop = "0px";      
+  }
+  if (top >= 69) {
+    document.getElementById("mainContent").style.paddingTop = "50px";
+  }
+  else {
+    document.getElementById("mainContent").style.paddingTop = "0px";
+  }
+}
 
- <script type="text/javascript">
-  var lists = document.querySelectorAll(".navbar-nav > li > a");
-  
-  for(var i = 0; i < lists.length - 2; i++){
-    lists[i].addEventListener("click", function(){
-      this.children[0].classList.toggle('dont_show_arrows');
-      this.children[1].classList.toggle('dont_show_arrows');
-    }, false);
-  };
-</script>
+function scrolltop() {
+  var top = 0;
+  if (typeof(window.pageYOffset) == "number") {
+    top = window.pageYOffset;
+  } else if (document.body && document.body.scrollTop) {
+    top = document.body.scrollTop;
+  } else if (document.documentElement && document.documentElement.scrollTop) {
+    top = document.documentElement.scrollTop;
+  }
+  return top;
+}
 
+
+</script>
 
 </body>
 </html>
