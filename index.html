@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -311,6 +312,8 @@ body{
 /* Main Content Starts */
 .main_content{
   z-index: -1;
+	position: relative;
+	top:0;
 }
 @media (min-width: 768px) {
   .main_content{
@@ -817,16 +820,16 @@ function fixMaincontent() {
   top = scrolltop()
   console.log(top);   
   if (top == 0) {
-    document.getElementById("mainContent").style.paddingTop = "0px";      
+    document.getElementById("mainContent").style.top = "0px";      
   }
-  if (top > 0 && top <= 67) {
-    document.getElementById("mainContent").style.paddingTop = "0px";      
+  if (top > 0 && top <= 68) {
+    document.getElementById("mainContent").style.top = "0px";      
   }
-  if (top >= 68) {
-    document.getElementById("mainContent").style.paddingTop = "50px";
+  if (top >= 69) {
+    document.getElementById("mainContent").style.top = "50px";
   }
   else {
-    document.getElementById("mainContent").style.paddingTop = "0px";
+    document.getElementById("mainContent").style.top = "0px";
   }
 }
 
