@@ -427,7 +427,7 @@ blockquote p.author {
   <div class="container-fluid">
     <div class="row">
       <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 logo">
-          <span class="ninja"><img src="ninja.png" width="50" height="50"/></span><h2><a href="javascript:void(0);">dompetitive<span class="second transitionable">Ninja</span></a></h2>
+          <span class="ninja"><img src="ninja.png" width="50" height="50"/></span><h2><a href="javascript:void(0);">Competitive<span class="second transitionable">Ninja</span></a></h2>
       </div>
       <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 slogan">
           <h5>Be Competitive, Be Ahead</h5>
@@ -435,7 +435,7 @@ blockquote p.author {
     </div>
   </div>
 </div>
-<nav class="navbar navbar-default transitionable box_shadow" role="navigation" id="myNavbar">
+<nav class="navbar navbar-default transitionable box_shadow" role="navigation" id="check">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar" aria-expanded="false" aria-controls="myNavbar">
@@ -815,13 +815,13 @@ function fixMaincontent() {
   top = scrolltop()
   console.log(top);   
   if (top >= 68){
-    document.getElementById("myNavbar").style.position = "fixed";
-    document.getElementById("myNavbar").style.top = "0px";
-    document.getElementById("myNavbar").style.width = "100%";
+    document.getElementById("check").style.position = "fixed";
+    document.getElementById("check").style.top = "0px";
+    document.getElementById("check").style.width = "100%";
     document.getElementById("mainContent").style.paddingTop = "50px";  
   }
   else {
-    document.getElementById("myNavbar").style.position = "relative";
+    document.getElementById("check").style.position = "relative";
     document.getElementById("mainContent").style.paddingTop = "0px";
   }
 }
