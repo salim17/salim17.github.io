@@ -1,0 +1,131 @@
+.p_0{
+  padding: 0 !important;
+}
+.p_2{
+  padding: 2px !important;
+}
+.p_5{ 
+  padding: 5px !important;
+}
+.p_10{
+  padding: 10px !important;
+}
+.p_20{
+  padding: 20px !important;
+}
+.p_50{
+  padding: 50px !important;
+}
+.p_l_0{
+  padding-left: 0px !important;
+}
+.p_l_2{
+  padding-left: 2px !important;
+}
+.p_l_5{
+  padding-left: 5px !important;
+}
+.p_l_10{
+  padding-left: 10px !important;
+}
+.p_l_15{
+  padding-left: 15px !important;
+}
+.p_l_20{
+  padding-left: 20px !important;
+}
+.p_l_50{
+  padding-left: 50px !important;
+}
+.p_r_0{
+  padding-right: 0px !important;
+}
+.p_r_2{
+  padding-right: 2px !important;
+}
+.p_r_5{
+  padding-right: 5px !important;
+}
+.p_r_10{
+  padding-right: 10px !important;
+}
+.p_r_15{
+  padding-right: 15px !important;
+}
+.p_r_20{
+  padding-right: 20px !important;
+}
+.p_t_20{
+	padding-top: 20px;
+}
+.m_t_0{
+  margin-top : 0px !important ;
+}
+.m_t_2{
+  margin-top : 2px !important ;
+}
+.m_t_5{
+  margin-top : 5px !important ;
+}
+.m_t_10{
+  margin-top : 10px !important ;
+}
+.m_t_20{
+  margin-top : 20px !important ;
+}
+.m_t_30{
+  margin-top : 30px !important ;
+}
+.m_t_50{
+  margin-top : 50px !important ;
+}
+.m_b_0{
+  margin-bottom : 0px !important ;
+}
+.m_b_2{
+  margin-bottom : 2px !important ;
+}
+.m_b_5{
+  margin-bottom : 5px !important ;
+}
+.m_b_10{
+  margin-bottom : 10px !important ;
+}
+.m_b_20{
+  margin-bottom : 20px !important ;
+}
+.m_b_30{
+  margin-bottom : 30px !important ;
+}
+.m_b_50{
+  margin-bottom : 50px !important ;
+}
+.m_0{
+  margin:0px !important;
+}
+.m_2{
+  margin:2px !important;
+}
+.m_5{
+  margin:5px !important;
+}
+.m_10{
+  margin:10px !important;
+}
+.bg_grey{
+  background: #f5f5f5;
+}
+.bg_white{
+  background: #fff;
+}
+.box_shadow{
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12) !important;
+}
+.transitionable{
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  -ms-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
