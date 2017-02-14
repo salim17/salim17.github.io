@@ -312,8 +312,7 @@ body{
 /* Main Content Starts */
 .main_content{
   z-index: -1;
-	position: relative;
-	top:0;
+  position: relative;
 }
 @media (min-width: 768px) {
   .main_content{
@@ -819,13 +818,7 @@ function fixMaincontent() {
   var top;
   top = scrolltop()
   console.log(top);   
-  if (top == 0) {
-    document.getElementById("mainContent").style.top = "0px";      
-  }
-  if (top > 0 && top < 68) {
-    document.getElementById("mainContent").style.top = "0px";      
-  }
-  if (top > 68){
+  if (top >= 69){
     document.getElementById("mainContent").style.top = "50px";	
   }
   else {
