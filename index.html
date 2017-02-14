@@ -193,6 +193,9 @@ body{
 .dropdown-menu > span:hover{
   color: #4285F4;
 }
+.dont_show_arrows{
+  display: none;
+}
 .main_menu > li > a{
   padding: 8px 12px;
   display: block;
@@ -252,6 +255,11 @@ body{
     background: #333;
   }*/
 }
+.fix_navbar{
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
 /* Navbar Ends */
 
 
@@ -270,7 +278,7 @@ body{
     background: #fff;
     display: block;
     overflow-x: hidden;
-    overflow-y: auto; /* Enable Vertical scroll if needed */
+    overflow-y: auto; 
   }
   .side_nav .imp_headings {
     padding-left: 16px;
@@ -318,7 +326,7 @@ body{
 }
 blockquote {
   border-left: 12px solid #bbb;
-  background: #f9f9f9;
+  background: #f5f5f5;
   font-style: italic;
   color: #888;
   padding: 20px 30px 10px 30px;
@@ -407,14 +415,6 @@ blockquote p.author {
 /* Main Content Ends */
 
 
-
-
-
-
-.dont_show_arrows{
-  display: none;
-}
-
 </style>
 </head>
 
@@ -433,7 +433,7 @@ blockquote p.author {
     </div>
   </div>
 </div>
-<nav class="navbar navbar-default transitionable box_shadow" role="navigation" id="check">
+<nav class="navbar navbar-default transitionable box_shadow" role="navigation" id="fixNavbar">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar" aria-expanded="false" aria-controls="myNavbar">
@@ -813,13 +813,11 @@ function fixMaincontent() {
   top = scrolltop()
   console.log(top);   
   if (top >= 68){
-    document.getElementById("check").style.position = "fixed";
-    document.getElementById("check").style.top = "0px";
-    document.getElementById("check").style.width = "100%";
+    document.getElementById("fixNavbar").classList.add("fix_navbar");
     document.getElementById("mainContent").style.paddingTop = "50px";  
   }
   else {
-    document.getElementById("check").style.position = "relative";
+    document.getElementById("fixNavbar").classList.remove("fix_navbar");
     document.getElementById("mainContent").style.paddingTop = "0px";
   }
 }
@@ -835,8 +833,35 @@ function scrolltop() {
   }
   return top;
 }
+</script>
 
+<script type="text/javascript">
+var barChartData = {
+  labels: ["Reasoning", "Quantitative Aptitude", "English"],
+  datasets: [{
+    fillColor: "#4285F4",
+    strokeColor: "#aaa",
+    data: [90,42,45]
+  }]
+}
 
+var index = 11;
+var ctx = document.getElementById("canvas").getContext("2d");
+var barChartDemo = new Chart(ctx).Bar(barChartData, {
+  responsive: true,
+  barValueSpacing: 28
+});
+</script>
+
+ <script type="text/javascript">
+  var lists = document.querySelectorAll(".navbar-nav > li > a");
+  
+  for(var i = 0; i < lists.length - 2; i++){
+    lists[i].addEventListener("click", function(){
+      this.children[0].classList.toggle('dont_show_arrows');
+      this.children[1].classList.toggle('dont_show_arrows');
+    }, false);
+  };
 </script>
 
 </body>
