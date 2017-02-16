@@ -446,7 +446,7 @@ blockquote p.author {
     </div>
     <div class="clearfix navbar-collapse collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Syllabus <i class="fa fa-caret-down" aria-hidden="true"></i><i class="fa fa-caret-up dont_show_arrows" aria-hidden="true"></i></a>
+        <li class="dropdown"><a class="dropdown-toggle" href="javascript:void(0)">Syllabus <i class="fa fa-caret-down" aria-hidden="true"></i><i class="fa fa-caret-up dont_show_arrows" aria-hidden="true"></i></a>
           <ul class="dropdown-menu"><span class="transitionable">×</span>
             <div class="container">
               <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
@@ -499,7 +499,7 @@ blockquote p.author {
             </div>
           </ul>
         </li>
-        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Previous Papers <i class="fa fa-caret-down" aria-hidden="true"></i><i class="fa fa-caret-up dont_show_arrows" aria-hidden="true"></i></a>
+        <li class="dropdown"><a class="dropdown-toggle" href="javascript:void(0)">Previous Papers <i class="fa fa-caret-down" aria-hidden="true"></i><i class="fa fa-caret-up dont_show_arrows" aria-hidden="true"></i></a>
           <ul class="dropdown-menu"><span class="transitionable">×</span>
             <div class="container">
               <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
@@ -552,7 +552,7 @@ blockquote p.author {
             </div>
           </ul>
         </li>
-        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">cut off <i class="fa fa-caret-down" aria-hidden="true"></i><i class="fa fa-caret-up dont_show_arrows" aria-hidden="true"></i></a>
+        <li class="dropdown"><a class="dropdown-toggle" href="javascript:void(0)">cut off <i class="fa fa-caret-down" aria-hidden="true"></i><i class="fa fa-caret-up dont_show_arrows" aria-hidden="true"></i></a>
           <ul class="dropdown-menu"><span class="transitionable">×</span>
             <div class="container">
               <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
@@ -605,7 +605,7 @@ blockquote p.author {
             </div>
           </ul>
         </li>
-        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Important Dates <i class="fa fa-caret-down" aria-hidden="true"></i><i class="fa fa-caret-up dont_show_arrows" aria-hidden="true"></i></a>
+        <li class="dropdown"><a class="dropdown-toggle" href="javascript:void(0)">Important Dates <i class="fa fa-caret-down" aria-hidden="true"></i><i class="fa fa-caret-up dont_show_arrows" aria-hidden="true"></i></a>
           <ul class="dropdown-menu"><span class="transitionable">×</span>
             <div class="container">
               <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
@@ -857,15 +857,26 @@ var barChartDemo = new Chart(ctx).Bar(barChartData, {
 });
 </script>
 
- <script type="text/javascript">
+<script type="text/javascript">
   var lists = document.querySelectorAll(".navbar-nav > li > a");
-  
-  for(var i = 0; i < lists.length - 2; i++){
-    lists[i].addEventListener("click", function(){
+  for(var i = 0; i < lists.length - 2; i++) {
+    lists[i].addEventListener("click", function() {
+      var chk = this.parentNode.getAttribute("class");
+      if(chk === "dropdown") {
+        for(var j = 0; j < lists.length - 2; j++) {
+          var attr = lists[j].parentNode.getAttribute("class");
+          if(attr === "dropdown open") {
+            lists[j].parentNode.classList.remove('open');
+            lists[j].children[0].classList.toggle('dont_show_arrows');
+            lists[j].children[1].classList.toggle('dont_show_arrows');
+          }
+        }
+      }
+      this.parentNode.classList.toggle('open');
       this.children[0].classList.toggle('dont_show_arrows');
       this.children[1].classList.toggle('dont_show_arrows');
-    }, false);
-  };
+    });
+   }
 </script>
 
 </body>
