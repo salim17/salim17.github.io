@@ -839,26 +839,11 @@ function scrolltop() {
 }
 </script>
 
-<script type="text/javascript">
-var barChartData = {
-  labels: ["Reasoning", "Quantitative Aptitude", "English"],
-  datasets: [{
-    fillColor: "#4285F4",
-    strokeColor: "#aaa",
-    data: [90,42,45]
-  }]
-}
 
-var index = 11;
-var ctx = document.getElementById("canvas").getContext("2d");
-var barChartDemo = new Chart(ctx).Bar(barChartData, {
-  responsive: true,
-  barValueSpacing: 28
-});
-</script>
 
 <script type="text/javascript">
   var lists = document.querySelectorAll(".navbar-nav > li > a");
+  var cross = document.querySelectorAll("ul.dropdown-menu > span");
   for(var i = 0; i < lists.length - 2; i++) {
     lists[i].addEventListener("click", function() {
       var chk = this.parentNode.getAttribute("class");
@@ -877,7 +862,33 @@ var barChartDemo = new Chart(ctx).Bar(barChartData, {
       this.children[1].classList.toggle('dont_show_arrows');
     });
    }
+  for(var i = 0; i < lists.length; i++){
+    cross[i].addEventListener("click", function(){
+      this.parentNode.parentNode.classList.remove('open');
+      this.parentNode.parentNode.children[0].children[0].classList.toggle('dont_show_arrows');
+      this.parentNode.parentNode.children[0].children[1].classList.toggle('dont_show_arrows');
+    });
+  }
 </script>
+
+<script type="text/javascript">
+var barChartData = {
+  labels: ["Reasoning", "Quantitative Aptitude", "English"],
+  datasets: [{
+    fillColor: "#4285F4",
+    strokeColor: "#aaa",
+    data: [90,42,45]
+  }]
+}
+
+var index = 11;
+var ctx = document.getElementById("canvas").getContext("2d");
+var barChartDemo = new Chart(ctx).Bar(barChartData, {
+  responsive: true,
+  barValueSpacing: 28
+});
+</script>
+
 
 </body>
 </html>
