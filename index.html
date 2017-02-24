@@ -97,6 +97,9 @@ body{
     margin-right: 0px; 
     margin-left: 0px; 
 }
+.container-fluid>.navbar-header #signin {
+    margin-right: -15px; 
+}
 .navbar-nav {
     margin: 0;
 }
@@ -841,7 +844,7 @@ function scrolltop() {
       this.children[1].classList.toggle('dont_show_arrows');
     });
    }
-  for(var i = 2; i < lists.length; i++){
+  for(var i = 0; i < cross.length; i++){
     cross[i].addEventListener("click", function(){
       this.parentNode.parentNode.classList.remove('open');
       this.parentNode.parentNode.children[0].children[0].classList.toggle('dont_show_arrows');
