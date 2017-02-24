@@ -164,15 +164,16 @@ body{
 }
 .dropdown-menu > span {
   position: absolute;
-  right: 25px;
-  color: #fff;
-  font-size: 32px;
+  right: 0px;
   cursor: pointer;
+  padding: 15px;
+  color: #fff;
 }
 .dropdown-menu > span:hover{
   color: #4285F4;
+  background: #fff;
 }
-.dont_show_arrows{
+.hidden{
   display: none;
 }
 .main_menu > li > a{
@@ -229,10 +230,19 @@ body{
   .navbar-collapse{
     margin-top: 50px;
   }
+  .dropdown-menu > span {
+    display: none;
+  }
 }
 .fix_navbar{
   position: fixed;
   top: 0;
+  width: 100%;
+}
+.search_container{
+  background-color: #333;
+  position: absolute;
+  top: 119px;
   width: 100%;
 }
 /* Navbar Ends */
@@ -391,7 +401,6 @@ blockquote p.author {
 }
 /* Main Content Ends */
 
-
 </style>
 </head>
 
@@ -429,14 +438,21 @@ blockquote p.author {
  
     <div class="navbar-header pull-right">
       <ul class="nav navbar-nav pull-left">
-        <li id="search"><a class="transitionable" href="#" id="search"><i class="fa fa-search"></i></a></li>
+        <li id="search"><a class="transitionable" href="#"><i class="fa fa-search"></i></a></li>
       </ul>
     </div>
 
+    <div class="navbar-header pull-right">
+      <ul class="nav navbar-nav pull-left">
+        <li class="hidden" id="hideSearchContainer"><a class="transitionable" href="#"><i class="fa fa-times"></i></a></li>
+      </ul>
+    </div>
+
+
     <div  id="myNavbar" class="clearfix navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li class="dropdown "><a class="dropdown-toggle transitionable" href="javascript:void(0)">Syllabus <i class="fa fa-caret-down" aria-hidden="true"></i><i class="fa fa-caret-up dont_show_arrows" aria-hidden="true"></i></a>
-          <ul class="dropdown-menu"><span class="transitionable">×</span>
+        <li class="dropdown "><a class="dropdown-toggle transitionable" href="javascript:void(0)">Syllabus <i class="fa fa-caret-down" aria-hidden="true"></i><i class="fa fa-caret-up hidden" aria-hidden="true"></i></a>
+          <ul class="dropdown-menu"><span class="transitionable"><i class="fa fa-times"></i></span>
             <div class="container">
               <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
                 <h3 class="p_l_10 p_b_0 m_b_0">BANKING</h3>
@@ -488,8 +504,8 @@ blockquote p.author {
             </div>
           </ul>
         </li>
-        <li class="dropdown"><a class="dropdown-toggle transitionable" href="javascript:void(0)">Previous Papers <i class="fa fa-caret-down" aria-hidden="true"></i><i class="fa fa-caret-up dont_show_arrows" aria-hidden="true"></i></a>
-          <ul class="dropdown-menu"><span class="transitionable">×</span>
+        <li class="dropdown"><a class="dropdown-toggle transitionable" href="javascript:void(0)">Previous Papers <i class="fa fa-caret-down" aria-hidden="true"></i><i class="fa fa-caret-up hidden" aria-hidden="true"></i></a>
+          <ul class="dropdown-menu"><span class="transitionable"><i class="fa fa-times"></i></span>
             <div class="container">
               <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
                 <h3 class="p_l_10 p_b_0 m_b_0">BANKING</h3>
@@ -541,8 +557,8 @@ blockquote p.author {
             </div>
           </ul>
         </li>
-        <li class="dropdown"><a class="dropdown-toggle transitionable" href="javascript:void(0)">cut off <i class="fa fa-caret-down" aria-hidden="true"></i><i class="fa fa-caret-up dont_show_arrows" aria-hidden="true"></i></a>
-          <ul class="dropdown-menu"><span class="transitionable">×</span>
+        <li class="dropdown"><a class="dropdown-toggle transitionable" href="javascript:void(0)">cut off <i class="fa fa-caret-down" aria-hidden="true"></i><i class="fa fa-caret-up hidden" aria-hidden="true"></i></a>
+          <ul class="dropdown-menu"><span class="transitionable"><i class="fa fa-times"></i></span>
             <div class="container">
               <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
                 <h3 class="p_l_10 p_b_0 m_b_0">BANKING</h3>
@@ -594,8 +610,8 @@ blockquote p.author {
             </div>
           </ul>
         </li>
-        <li class="dropdown"><a class="dropdown-toggle transitionable" href="javascript:void(0)">Important Dates <i class="fa fa-caret-down" aria-hidden="true"></i><i class="fa fa-caret-up dont_show_arrows" aria-hidden="true"></i></a>
-          <ul class="dropdown-menu"><span class="transitionable">×</span>
+        <li class="dropdown"><a class="dropdown-toggle transitionable" href="javascript:void(0)">Important Dates <i class="fa fa-caret-down" aria-hidden="true"></i><i class="fa fa-caret-up hidden" aria-hidden="true"></i></a>
+          <ul class="dropdown-menu"><span class="transitionable"><i class="fa fa-times"></i></span>
             <div class="container">
               <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
                 <h3 class="p_l_10 p_b_0 m_b_0">BANKING</h3>
@@ -653,6 +669,8 @@ blockquote p.author {
   </div>
 </nav>
 
+
+
 <div class="side_nav box_shadow">
   <h3 class="imp_headings">Banking</h3>
   <ul>
@@ -703,7 +721,15 @@ blockquote p.author {
     <li><a href="#">srmjeee</a></li>
   </ul>
 </div>
-
+    <div class="search_container hidden">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-12 text-center">
+            <h1>Hii!</h1>
+          </div>
+      </div>
+      </div>
+    </div>
 
 <div class="main_content" id="mainContent">
   <div class="container-fluid">
@@ -805,7 +831,7 @@ function fixMaincontent() {
   top = scrolltop();  
   if (top >= 68){
     document.getElementById("fixNavbar").classList.add("fix_navbar");
-    document.getElementById("mainContent").style.paddingTop = "50px";  
+    document.getElementById("mainContent").style.paddingTop = "50px"; 
   }
   else {
     document.getElementById("fixNavbar").classList.remove("fix_navbar");
@@ -831,31 +857,45 @@ function scrolltop() {
 <script type="text/javascript">
   var lists = document.querySelectorAll(".navbar-nav > li > a");
   var cross = document.querySelectorAll("ul.dropdown-menu > span");
-  for(var i = 2; i < lists.length - 1; i++) {
+  var searchIcon = document.querySelector("#search");
+  var hideSearchContainer = document.querySelector("#hideSearchContainer");
+  var searchContainer = document.querySelector(".search_container");
+
+  for(var i = 3; i < lists.length - 1; i++) {
     lists[i].addEventListener("click", function() {
       var chk = this.parentNode.getAttribute("class");
       if(chk === "dropdown") {
-        for(var j = 2; j < lists.length - 1; j++) {
+        for(var j = 3; j < lists.length - 1; j++) {
           var attr = lists[j].parentNode.getAttribute("class");
           if(attr === "dropdown open") {
             lists[j].parentNode.classList.remove('open');
-            lists[j].children[0].classList.toggle('dont_show_arrows');
-            lists[j].children[1].classList.toggle('dont_show_arrows');
+            lists[j].children[0].classList.toggle('hidden');
+            lists[j].children[1].classList.toggle('hidden');
           }
         }
       }
       this.parentNode.classList.toggle('open');
-      this.children[0].classList.toggle('dont_show_arrows');
-      this.children[1].classList.toggle('dont_show_arrows');
+      this.children[0].classList.toggle('hidden');
+      this.children[1].classList.toggle('hidden');
     });
    }
   for(var i = 0; i < cross.length; i++){
     cross[i].addEventListener("click", function(){
       this.parentNode.parentNode.classList.remove('open');
-      this.parentNode.parentNode.children[0].children[0].classList.toggle('dont_show_arrows');
-      this.parentNode.parentNode.children[0].children[1].classList.toggle('dont_show_arrows');
+      this.parentNode.parentNode.children[0].children[0].classList.toggle('hidden');
+      this.parentNode.parentNode.children[0].children[1].classList.toggle('hidden');
     });
   }
+  searchIcon.addEventListener("click", function(){
+    this.classList.toggle('hidden');
+    hideSearchContainer.classList.toggle('hidden');
+    searchContainer.classList.toggle('hidden');
+  });
+  hideSearchContainer.addEventListener("click", function(){
+    this.classList.toggle('hidden');
+    searchIcon.classList.toggle('hidden');
+    searchContainer.classList.toggle('hidden');
+  });
 </script>
 
 <script type="text/javascript">
