@@ -270,6 +270,30 @@ body.modal-open {
   font-family: 'Kaushan Script',cursive;
   color: #4285F4; 
 }
+.subscribe_form .form-control{
+  border-radius: 1px;
+  -webkit-box-shadow: none ;
+   box-shadow: none ; 
+  -webkit-transition: none ;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #4285F4;
+  border-color: #4285F4;
+}
+.btn-primary:focus,
+.btn-primary.focus {
+  color: #fff;
+  background-color: #333;
+  border-color: #333;
+}
+.btn-primary:hover {
+  color: #fff;
+  background-color: #333;
+  border-color: #333;
+}
+
+
 /* Navbar Ends */
 
 
@@ -688,21 +712,34 @@ blockquote p.author {
             </div>
           </ul>
         </li>
-        <li data-toggle="modal" data-target="#subscribe"><a class="transitionable" href="#">Subscribe</a></li>
+        <li data-toggle="modal" data-target="#subscribe"><a class="transitionable" href="javascript:void(0);">Subscribe</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
 <div class="modal fade" id="subscribe" tabindex="-1" role="dialog" aria-labelledby="mySubscribeLabel">
-  <div class="modal-dialog modal-xs" role="document"> 
+  <div class="modal-dialog modal-lg" role="document"> 
     <div class="modal-content">
       <div class="modal-body bg_grey">
         <button type="button" class="close" data-dismiss="modal" aria-label="close"><span aria-hidden="true"><i class="fa fa-times"></i></span></button>
         <div class="modal_holder"> 
           <div class="modal_details">      
             <h3>SUBSCRIBE <span>Competitive Ninja</span></h3>
-            <p>Subscribe Us and recieve updates directly into your inbox.</p>
+            <p>Subscribe us to recieve updates directly into your inbox.</p>
+          </div>
+          <div class="m_t_50">
+            <form class="inline-form subscribe_form ajax_form" action="">
+              <div class="form-group">
+                <label class="sr-only" for="eMail">Email</label>
+                <div class="input-group">
+                  <div class="input-group-addon"><i class="fa fa-envelope"></i></div>
+                  <input type="email" class="input-lg form-control" name="email" id="eMail" placeholder="email">
+                  <div class="help-text"></div>
+                </div>
+              </div>
+              <button class="btn btn-lg btn-primary btn-block text-bold transitionable subscribe_form_submit_btn"> SUBSCRIBE </button>
+            </form>
           </div> 
         </div>
       </div>
