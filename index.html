@@ -242,11 +242,33 @@ body{
   top: 0;
   width: 100%;
 }
+/* Search Bar */
 .search_container{
   background-color: #333;
   position: absolute;
   top: 119px;
   width: 100%;
+}
+/* Modal */
+body.modal-open {
+  overflow-y: auto !important;
+  padding: 0 !important;
+}
+.modal-body{
+  border-radius: 5px;
+}
+.modal_holder{
+  padding: 20px;
+  text-align: center;
+}
+.modal_details{
+  color: #666;
+  font-family: "Raleway";
+  font-weight: 400; 
+}
+.modal_details > h3 > span{
+  font-family: 'Kaushan Script',cursive;
+  color: #4285F4; 
 }
 /* Navbar Ends */
 
@@ -666,12 +688,27 @@ blockquote p.author {
             </div>
           </ul>
         </li>
-        <li><a class="transitionable" href="#">Subscribe</a></li>
+        <li data-toggle="modal" data-target="#subscribe"><a class="transitionable" href="#">Subscribe</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
+<div class="modal fade" id="subscribe" tabindex="-1" role="dialog" aria-labelledby="mySubscribeLabel">
+  <div class="modal-dialog modal-xs" role="document"> 
+    <div class="modal-content">
+      <div class="modal-body bg_grey">
+        <button type="button" class="close" data-dismiss="modal" aria-label="close"><span aria-hidden="true"><i class="fa fa-times"></i></span></button>
+        <div class="modal_holder"> 
+          <div class="modal_details">      
+            <h3>SUBSCRIBE <span>Competitive Ninja</span></h3>
+            <p>Subscribe Us and recieve updates directly into your inbox.</p>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 <div class="side_nav box_shadow">
@@ -724,7 +761,7 @@ blockquote p.author {
     <li><a href="#">srmjeee</a></li>
   </ul>
 </div>
-    <div class="search_container hidden">
+    <div class="search_container hidden" id="searchBar">
       <div class="container-fluid">
         <div class="row">
           <div class="col-xs-12 text-center">
@@ -862,7 +899,7 @@ function scrolltop() {
   var cross = document.querySelectorAll("ul.dropdown-menu > span");
   var searchIcon = document.querySelector("#search");
   var hideSearchContainer = document.querySelector("#hideSearchContainer");
-  var searchContainer = document.querySelector(".search_container");
+  var searchContainer = document.querySelector("#searchBar");
 
   for(var i = 3; i < lists.length - 1; i++) {
     lists[i].addEventListener("click", function() {
