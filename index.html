@@ -247,7 +247,6 @@ body{
 .search_container{
   background-color: #222;
   position: absolute;
-  top: 119px;
   width: 100%;
   padding: 10px 0px;
 }
@@ -500,26 +499,26 @@ blockquote p.author {
 
     <div class="navbar-header pull-right">
       <ul class="nav navbar-nav pull-left">
-        <li id="signin"><a class="transitionable" href="#" ><i class="fa fa-user-plus"></i></a></li>
+        <li id="signin"><a class="transitionable" href="javascript:void(0);" ><i class="fa fa-user-plus"></i></a></li>
       </ul>
     </div>
  
     <div class="navbar-header pull-right">
       <ul class="nav navbar-nav pull-left">
-        <li id="search"><a class="transitionable" href="#"><i class="fa fa-search"></i></a></li>
+        <li id="search"><a class="transitionable" href="javascript:void(0);"><i class="fa fa-search"></i></a></li>
       </ul>
     </div>
 
     <div class="navbar-header pull-right">
       <ul class="nav navbar-nav pull-left">
-        <li class="hidden" id="hideSearchContainer"><a class="transitionable" href="#"><i class="fa fa-times"></i></a></li>
+        <li class="hidden" id="hideSearchContainer"><a class="transitionable" href="javascript:void(0);"><i class="fa fa-times"></i></a></li>
       </ul>
     </div>
 
 
     <div  id="myNavbar" class="clearfix navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li class="dropdown "><a class="dropdown-toggle transitionable" href="javascript:void(0)">Syllabus <i class="fa fa-caret-down" aria-hidden="true"></i><i class="fa fa-caret-up hidden" aria-hidden="true"></i></a>
+        <li class="dropdown"><a class="dropdown-toggle transitionable" href="javascript:void(0)">Syllabus <i class="fa fa-caret-down" aria-hidden="true"></i><i class="fa fa-caret-up hidden" aria-hidden="true"></i></a>
           <ul class="dropdown-menu"><span class="transitionable"><i class="fa fa-times"></i></span>
             <div class="container">
               <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 main_menu">
@@ -940,10 +939,12 @@ function fixMaincontent() {
   if (top >= 68){
     document.getElementById("fixNavbar").classList.add("fix_navbar");
     document.getElementById("mainContent").style.paddingTop = "50px"; 
+    document.getElementById("searchBar").style.top = (top + 50) + "px";
   }
   else {
     document.getElementById("fixNavbar").classList.remove("fix_navbar");
     document.getElementById("mainContent").style.paddingTop = "0px";
+    document.getElementById("searchBar").style.top = "119px";
   }
 }
 
@@ -973,14 +974,7 @@ function scrolltop() {
     lists[i].addEventListener("click", function() {
       var chk = this.parentNode.getAttribute("class");
       if(chk === "dropdown") {
-        for(var j = 3; j < lists.length - 1; j++) {
-          var attr = lists[j].parentNode.getAttribute("class");
-          if(attr === "dropdown open") {
-            lists[j].parentNode.classList.remove('open');
-            lists[j].children[0].classList.toggle('hidden');
-            lists[j].children[1].classList.toggle('hidden');
-          }
-        }
+        closeDropdrownsIfOpen();
       }
       this.parentNode.classList.toggle('open');
       this.children[0].classList.toggle('hidden');
@@ -998,12 +992,24 @@ function scrolltop() {
     this.classList.toggle('hidden');
     hideSearchContainer.classList.toggle('hidden');
     searchContainer.classList.toggle('hidden');
+    closeDropdrownsIfOpen();
   });
   hideSearchContainer.addEventListener("click", function(){
     this.classList.toggle('hidden');
     searchIcon.classList.toggle('hidden');
     searchContainer.classList.toggle('hidden');
   });
+
+  function closeDropdrownsIfOpen() {
+    for(var j = 3; j < lists.length - 1; j++) {
+      var attr = lists[j].parentNode.getAttribute("class");
+      if(attr === "dropdown open") {
+        lists[j].parentNode.classList.remove('open');
+        lists[j].children[0].classList.toggle('hidden');
+        lists[j].children[1].classList.toggle('hidden');
+      }
+    }
+  }
 </script>
 
 <script type="text/javascript">
