@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -97,13 +96,15 @@ body{
     margin-left: -15px; 
   }
 }
-.container-fluid>.navbar-header {
-    margin-right: 0px; 
-    margin-left: 0px; 
-}
-.container-fluid>.navbar-header #signin {
+.container-fluid > .navbar-header {
     margin-right: -15px; 
+    margin-left: 15px; 
 }
+.container-fluid > .navbar-header:first-child{
+  margin-left: 0px;
+}
+
+
 .navbar-nav {
     margin: 0;
 }
@@ -208,36 +209,6 @@ body{
   background-color: #333;
   border-color: #333;
 }
-@media (max-width: 993px) {
-  .dropdown-menu{
-    max-height: 400px;
-    width: 100%;
-    overflow-y: auto;
-    overflow-x: hidden;
-    -webkit-overflow-scrolling:touch; // mobile safari
-  }
-}
-@media (max-width: 768px) {
-  .dropdown-menu{
-    max-height: 200px;
-    width: 100%;
-    overflow-y: auto;
-    -webkit-overflow-scrolling:touch; // mobile safari
-  }
-  .main_menu > h3{
-    color: #333;
-  }
-  .main_menu > li > a:hover{
-   color: #fff;
-   background-color: #333;
-  }
-  .navbar-collapse{
-    margin-top: 50px;
-  }
-  .dropdown-menu > span {
-    display: none;
-  }
-}
 
 .fix_navbar{
   position: fixed;
@@ -245,36 +216,20 @@ body{
   width: 100%;
 }
 /* Search Bar */
-.search_container{
-  background-color: #222;
+.search_form{
   position: absolute;
-  width: 100%;
-  padding: 10px 0px;
-  -webkit-transform: translateZ(0);
-  -moz-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  -o-transform: translateZ(0);
-  transform: translateZ(0);
+  right: 45.72px;
+  width: 40%;
+  z-index: 5000;
+  height: 50px;
+  background-color: #222;
+}
+.align_search_form{
+  height: 50px;
+  padding: 7px 10px;
 }
 .search_form .form-group{
-  margin-bottom: 0;
-}
-.search_form .form-group .input-group .form-control{
-  height: 40px;
-  padding: 8px 12px;
-  font-size: 18px;
-  line-height: 1.8px;
-  color: #666;
-  background-color: #333;
-  border: 1px solid #333;
-}
-.search_form .form-group .input-group .input-group-addon {
-  padding: 8px 12px;
-  font-size: 18px;
-  line-height: 1.6px;
-  color: #fff;
-  background-color: #222;
-  border: 1px solid #333;
+  margin-bottom: 0px;
 }
 /* Modal */
 body.modal-open {
@@ -317,6 +272,40 @@ body.modal-open {
   color: #fff;
   background-color: #333;
   border-color: #333;
+}
+
+@media (max-width: 993px) {
+  .dropdown-menu{
+    max-height: 400px;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling:touch; // mobile safari
+  }
+}
+@media (max-width: 768px) {
+  .dropdown-menu{
+    max-height: 200px;
+    width: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling:touch; // mobile safari
+  }
+  .main_menu > h3{
+    color: #333;
+  }
+  .main_menu > li > a:hover{
+   color: #fff;
+   background-color: #333;
+  }
+  .navbar-collapse{
+    margin-top: 50px;
+  }
+  .dropdown-menu > span {
+    display: none;
+  }
+  .search_form{
+    width: 80%;
+  }
 }
 /* Navbar Ends */
 
@@ -503,11 +492,7 @@ blockquote p.author {
       </button> 
     </div>
 
-    <div class="navbar-header pull-right">
-      <ul class="nav navbar-nav pull-left">
-        <li id="signin"><a class="transitionable" href="javascript:void(0);" ><i class="fa fa-user-plus"></i></a></li>
-      </ul>
-    </div>
+
  
     <div class="navbar-header pull-right">
       <ul class="nav navbar-nav pull-left">
@@ -520,6 +505,31 @@ blockquote p.author {
         <li class="hidden" id="closeSearchIcon"><a class="transitionable" href="javascript:void(0);"><i class="fa fa-times"></i></a></li>
       </ul>
     </div>
+
+    <div class="navbar-header pull-right">
+      <ul class="nav navbar-nav pull-left search_form hidden" id="searchBar">
+        <li class="align_search_form">
+          <form class="ajax_form" action="">
+            <div class="form-group">
+              <label class="sr-only" for="eMail">Search</label>
+              <div class="input-group">
+                <input type="search" class="form-control" name="search" placeholder="Search">
+                <div class="help-text"></div>
+                <div class="input-group-addon">
+                  <i class="fa fa-search"></i>
+                </div>
+              </div>
+            </div>
+          </form>
+        </li>
+      </ul>
+    </div>
+    <div class="navbar-header pull-right">
+      <ul class="nav navbar-nav pull-left">
+        <li id="signin"><a class="transitionable" href="javascript:void(0);" ><i class="fa fa-user-plus"></i></a></li>
+      </ul>
+    </div>
+
 
 
     <div  id="myNavbar" class="clearfix navbar-collapse collapse">
@@ -753,7 +763,7 @@ blockquote p.author {
             <p>Subscribe us to recieve updates directly into your inbox.</p>
           </div>
           <div class="m_t_30">
-            <form class="inline-form subscribe_form ajax_form" action="">
+            <form class="subscribe_form ajax_form" action="">
               <div class="form-group">
                 <label class="sr-only" for="eMail">Email</label>
                 <div class="input-group">
@@ -823,7 +833,7 @@ blockquote p.author {
   </ul>
 </div>
 
-<div class="search_container hidden" id="searchBar">
+<!-- <div class="search_container hidden" id="searchBar">
   <div class="container-fluid">
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-sm-offset-3">
@@ -842,7 +852,7 @@ blockquote p.author {
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 <div class="main_content" id="mainContent">
   <div class="container-fluid">
@@ -945,12 +955,10 @@ function fixMaincontent() {
   if (top >= 68){
     document.getElementById("fixNavbar").classList.add("fix_navbar");
     document.getElementById("mainContent").style.paddingTop = "50px";
-    document.getElementById("searchBar").style.top = (top + 50) + "px";
   }
   else {
     document.getElementById("fixNavbar").classList.remove("fix_navbar");
     document.getElementById("mainContent").style.paddingTop = "0px";
-    document.getElementById("searchBar").style.top = "119px";
   }
 }
 
@@ -974,7 +982,7 @@ function scrolltop() {
   var cross = document.querySelectorAll("ul.dropdown-menu > span");
   var searchIcon = document.querySelector("#search");
   var closeSearchIcon = document.querySelector("#closeSearchIcon");
-  var searchBar = document.querySelector("#searchBar");
+  var searchBar = document.getElementById("searchBar");
 
   for(var i = 3; i < lists.length - 1; i++) {
     lists[i].addEventListener("click", function() {
@@ -998,7 +1006,6 @@ function scrolltop() {
     this.classList.toggle('hidden');
     closeSearchIcon.classList.toggle('hidden');
     searchBar.classList.toggle('hidden');
-    closeDropdrownsIfOpen();
   });
   closeSearchIcon.addEventListener("click", function(){
     this.classList.toggle('hidden');
