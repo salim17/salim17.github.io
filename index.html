@@ -176,7 +176,7 @@ body{
 .hidden{
   display: none;
 }
-#hideSearchContainer{
+#closeSearchIcon{
   background: #333;
 }
 .main_menu > li > a{
@@ -511,7 +511,7 @@ blockquote p.author {
 
     <div class="navbar-header pull-right">
       <ul class="nav navbar-nav pull-left">
-        <li class="hidden" id="hideSearchContainer"><a class="transitionable" href="javascript:void(0);"><i class="fa fa-times"></i></a></li>
+        <li class="hidden" id="closeSearchIcon"><a class="transitionable" href="javascript:void(0);"><i class="fa fa-times"></i></a></li>
       </ul>
     </div>
 
@@ -752,7 +752,7 @@ blockquote p.author {
                 <label class="sr-only" for="eMail">Email</label>
                 <div class="input-group">
                   <div class="input-group-addon"><i class="fa fa-envelope"></i></div>
-                  <input type="email" class="input-lg form-control" name="email" id="eMail" placeholder="Email">
+                  <input type="email" class="input-lg form-control" name="email" placeholder="Email">
                   <div class="help-text"></div>
                 </div>
               </div>
@@ -825,7 +825,7 @@ blockquote p.author {
           <div class="form-group">
             <label class="sr-only" for="eMail">Search</label>
             <div class="input-group">
-              <input type="search" class="form-control" name="email" id="eMail" placeholder="Search">
+              <input type="search" class="form-control" name="search" placeholder="Search">
               <div class="help-text"></div>
               <div class="input-group-addon">
                 <i class="fa fa-search"></i>
@@ -967,8 +967,8 @@ function scrolltop() {
   var lists = document.querySelectorAll(".navbar-nav > li > a");
   var cross = document.querySelectorAll("ul.dropdown-menu > span");
   var searchIcon = document.querySelector("#search");
-  var hideSearchContainer = document.querySelector("#hideSearchContainer");
-  var searchContainer = document.querySelector("#searchBar");
+  var closeSearchIcon = document.querySelector("#closeSearchIcon");
+  var searchBar = document.querySelector("#searchBar");
 
   for(var i = 3; i < lists.length - 1; i++) {
     lists[i].addEventListener("click", function() {
@@ -990,14 +990,14 @@ function scrolltop() {
   }
   searchIcon.addEventListener("click", function(){
     this.classList.toggle('hidden');
-    hideSearchContainer.classList.toggle('hidden');
-    searchContainer.classList.toggle('hidden');
+    closeSearchIcon.classList.toggle('hidden');
+    searchBar.classList.toggle('hidden');
     closeDropdrownsIfOpen();
   });
-  hideSearchContainer.addEventListener("click", function(){
+  closeSearchIcon.addEventListener("click", function(){
     this.classList.toggle('hidden');
     searchIcon.classList.toggle('hidden');
-    searchContainer.classList.toggle('hidden');
+    searchBar.classList.toggle('hidden');
   });
 
   function closeDropdrownsIfOpen() {
