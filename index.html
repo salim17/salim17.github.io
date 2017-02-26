@@ -249,6 +249,8 @@ body{
   position: absolute;
   width: 100%;
   padding: 10px 0px;
+  -webkit-transform: translateZ(0);
+  tranform: translateZ(0);
 }
 .search_form .form-group{
   margin-bottom: 0;
@@ -939,7 +941,6 @@ function fixMaincontent() {
   if (top >= 68){
     document.getElementById("fixNavbar").classList.add("fix_navbar");
     document.getElementById("mainContent").style.paddingTop = "50px";
-    document.getElementById("searchBar").style.transform = "translateZ(0)"; 
     document.getElementById("searchBar").style.top = (top + 50) + "px";
   }
   else {
