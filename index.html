@@ -496,7 +496,7 @@ blockquote p.author {
  
     <div class="navbar-header pull-right">
       <ul class="nav navbar-nav pull-left">
-        <li id="search"><a class="transitionable" href="javascript:void(0);"><i class="fa fa-search"></i></a></li>
+        <li id="searchIcon"><a class="transitionable" href="javascript:void(0);"><i class="fa fa-search"></i></a></li>
       </ul>
     </div>
 
@@ -513,7 +513,7 @@ blockquote p.author {
             <div class="form-group">
               <label class="sr-only" for="eMail">Search</label>
               <div class="input-group">
-                <input type="search" class="form-control" name="search" placeholder="Search">
+                <input type="search" class="form-control" name="search" placeholder="Search" required>
                 <div class="help-text"></div>
                 <div class="input-group-addon">
                   <i class="fa fa-search"></i>
@@ -768,7 +768,7 @@ blockquote p.author {
                 <label class="sr-only" for="eMail">Email</label>
                 <div class="input-group">
                   <div class="input-group-addon"><i class="fa fa-envelope"></i></div>
-                  <input type="email" class="input-lg form-control" name="email" placeholder="Email">
+                  <input type="email" class="input-lg form-control" name="email" placeholder="Email" required>
                   <div class="help-text"></div>
                 </div>
               </div>
@@ -990,6 +990,20 @@ $(".my_nav > li > a").on("click", function() {
   $(this).children().toggleClass("hidden");
   $(this).parent().siblings().filter(".dropdown.open").children("a").children().toggleClass("hidden");
   $(this).parent().siblings().filter(".dropdown.open").removeClass("open");
+});
+$("ul.dropdown-menu > span").on("click", function(){
+  $(this).parents("li").removeClass("open");
+  $(this).parents("li").children("a").children().toggleClass("hidden");
+});
+$("#searchIcon").on("click", function() {
+  $(this).addClass("hidden");
+  $("#closeSearchIcon").toggleClass("hidden");
+  $("#searchBar").toggleClass("hidden");
+});
+$("#closeSearchIcon").on("click", function() {
+  $("#searchBar").toggleClass("hidden");
+  $(this).toggleClass("hidden");
+  $("#searchIcon").toggleClass("hidden");
 });
 </script>
 
