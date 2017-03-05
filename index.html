@@ -985,11 +985,11 @@ $(window).scroll(function(){
     $("#mainContent").css("paddingTop", "0px");
   }
 });
-$(".my_nav > li").on("click", function() {
-  $(this).not(".not").toggleClass("open");
-  $(this).children("a").children().toggleClass("hidden");
-  $(this).siblings().filter(".dropdown.open").children("a").children().toggleClass("hidden");
-  $(this).siblings().filter(".dropdown.open").removeClass("open");
+$(".my_nav > li > a").on("click", function() {
+  $(this).parent().not(".not").toggleClass("open");
+  $(this).children().toggleClass("hidden");
+  $(this).parent().siblings().filter(".dropdown.open").children("a").children().toggleClass("hidden");
+  $(this).parent().siblings().filter(".dropdown.open").removeClass("open");
 });
 </script>
 
