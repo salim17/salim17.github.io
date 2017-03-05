@@ -5,7 +5,7 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <meta name="description" content="Competitive Ninja offers users complete reference to nearly every competitive Exams in India.">
  <title>CompetitiveNinja | The Complete Career Reference</title>
- <link rel="icon" type="image/ico" href="ninja1.jpeg">
+ <link rel="icon" type="image/ico" href="ninja.png">
 
  <!-- FONTS -->
  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
@@ -304,7 +304,7 @@ body.modal-open {
     display: none;
   }
   .search_form{
-    width: 82%;
+    width: 80%;
   }
 }
 /* Navbar Ends */
@@ -394,14 +394,14 @@ blockquote p.career_quote:before {
     font-size: 48px;
     color: #bbb;
 } 
-blockquote p.career_quote:after { 
-    content: "";
+blockquote p.career_quote:after {
+  
 }
 blockquote p.author {
   font-size: 16px;
 }
 @media (max-width: 768px) {
-  blockquote p.career_quote:before { 
+  blockquote p.career_quote:before {
     left: 10px;
   }
 }
@@ -936,10 +936,21 @@ blockquote p.author {
       <h1>I am</h1>
 </div>
 
-
+<script type="text/javascript">
+$(window).scroll(function(){
+  console.log($(this).scrollTop());
+  if($(this).scrollTop() > 68){
+    $("#fixNavbar").addClass("fix_navbar");
+    $("#mainContent").css("paddingTop", "50px");
+  } else{
+    $("#fixNavbar").removeClass("fix_navbar");
+    $("#mainContent").css("paddingTop", "0px");
+  }
+});
+</script>
 
 <script type="text/javascript">
-if (window.addEventListener) {  
+/*if (window.addEventListener) {  
   window.addEventListener("scroll", function () {
     fixMaincontent(); 
   });
@@ -972,13 +983,13 @@ function scrolltop() {
     top = document.documentElement.scrollTop;
   }
   return top;
-}
+}*/
 </script>
 
 
 
 <script type="text/javascript">
-  var lists = document.querySelectorAll(".navbar-nav > li > a");
+/*  var lists = document.querySelectorAll(".navbar-nav > li > a");
   var cross = document.querySelectorAll("ul.dropdown-menu > span");
   var searchIcon = document.querySelector("#search");
   var closeSearchIcon = document.querySelector("#closeSearchIcon");
@@ -1022,11 +1033,11 @@ function scrolltop() {
         lists[j].children[1].classList.toggle('hidden');
       }
     }
-  }
+  }*/
 </script>
 
 <script type="text/javascript">
-var barChartData = {
+/*var barChartData = {
   labels: ["Reasoning", "Quantitative Aptitude", "English"],
   datasets: [{
     fillColor: "#4285F4",
@@ -1040,7 +1051,7 @@ var ctx = document.getElementById("canvas").getContext("2d");
 var barChartDemo = new Chart(ctx).Bar(barChartData, {
   responsive: true,
   barValueSpacing: 28
-});
+});*/
 </script>
 
 
