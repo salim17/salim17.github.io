@@ -161,8 +161,6 @@ body{
 }
 .nav > li.dropdown.open .dropdown-menu {
   width: 100%;
-  left: 0;
-  right: 0;
 }
 .dropdown-menu > span {
   position: absolute;
@@ -406,59 +404,40 @@ blockquote p.author {
   }
 }
 .features{
-  padding: 80px 10px 20px;
-  text-align: center;
+  padding: 50px 0px;
 }
-.features > h1{
+.features .feature_head {
   text-transform: uppercase;
-  margin-top: 8px;
+  margin-top: 4px;
   font-size: 54px;
-  color: #777;
-  font-family: "Raleway";
-  font-weight: 500;
 }
-.features .features_icons > i{
+.features .feature_icon{
   font-size: 54px;
   color: #4285F4;
 }
-.features > p {
+.features .feature_desc{
   font-size: 18px;
   font-style: italic;
-  color: #999;
 }
 .img-thumbnail{
   border: 3px solid #ddd;
 }
-.snapshot{
-  padding: 40px 5px 8px;
-  text-align: center;
-}
-.snapshot > p {
-  font-size: 18px;
-  font-style: italic;
-  color: #999;
-}
+
 @media(max-width: 768px){
 
 }
 @media(max-width: 993px){
   .features{
-    padding: 40px 5px 5px;
+    padding: 20px 0px;
   }
-  .features .features_icons > i {
+  .features .feature_icon {
     font-size: 44px;
   }
-  .features > p{
+  .features .feature_desc{
     font-size: 16px;
   }
-  .features > h1{
+  .features .feature_head{
     font-size: 44px;
-  }
-  .snapshot {
-    padding: 40px 5px 20px;
-  }
-  .snapshot > p{
-    font-size: 16px;
   }
 }
 /* Main Content Ends */
@@ -768,7 +747,7 @@ blockquote p.author {
                 <label class="sr-only" for="eMail">Email</label>
                 <div class="input-group">
                   <div class="input-group-addon"><i class="fa fa-envelope"></i></div>
-                  <input type="email" class="input-lg form-control" name="email" placeholder="Email" required>
+                  <input type="email" class="input-lg form-control" name="email" placeholder="Email">
                   <div class="help-text"></div>
                 </div>
               </div>
@@ -833,27 +812,6 @@ blockquote p.author {
   </ul>
 </div>
 
-<!-- <div class="search_container hidden" id="searchBar">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-        <form class="search_form ajax_form" action="">
-          <div class="form-group">
-            <label class="sr-only" for="eMail">Search</label>
-            <div class="input-group">
-              <input type="search" class="form-control" name="search" placeholder="Search">
-              <div class="help-text"></div>
-              <div class="input-group-addon">
-                <i class="fa fa-search"></i>
-              </div>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</div> -->
-
 <div class="main_content" id="mainContent">
   <div class="container-fluid">
     <div class="row">
@@ -867,17 +825,19 @@ blockquote p.author {
   <div class="bg_white">
     <div class="container-fluid">
       <div class="row">
-          <div class="col-xs-12 col-sm-12 col-md-6 features">
-            <div class="features_icons">
-             <i class="fa fa-book"></i>
+        <div class="features clearfix">
+          <div class="col-md-6 m_t_50 m_b_30">
+            <div class="text-center">
+              <i class="fa fa-book feature_icon"></i>
+              <h1 class="feature_head">Syllabus</h1>
+              <p class="feature_desc">Be updated on what is the current Syllabus, After all "Well Begun is half done!"</p>
             </div>
-            <h1>Syllabus</h1>
-            <p>Be updated on what is the current Syllabus, After all "Well Begun is half done!"</p>
           </div>
-          <div class="col-xs-12 col-sm-12 col-md-6 snapshot">
-            <img class="img-responsive img-thumbnail" src="1.jpg" />
-            <p>Interactive charts to increase user experience</p>
+          <div class="col-md-6 text-center">
+            <img class="img-responsive img-thumbnail" src="1.jpg">
+            <p class="feature_desc m_t_5">Be updated on what is the current Syllabus, After all "Well Begun is half done!"</p>
           </div>
+        </div>
       </div>
     </div>
   </div>
@@ -885,24 +845,22 @@ blockquote p.author {
   <div class="bg_grey">
     <div class="container-fluid">
       <div class="row">
-          <div class="col-xs-12 col-sm-12 col-md-6 snapshot">
-            <img class="img-responsive img-thumbnail" src="Capture.PNG" />
-            <p>Interactive charts to increase user experience</p>
+        <div class="features clearfix">
+          <div class="col-md-6 text-center">
+            <img class="img-responsive img-thumbnail" src="Capture.PNG">
+            <p class="feature_desc m_t_5">Be updated on what is the current Syllabus, After all "Well Begun is half done!"</p>
           </div>
-
-          <div class="col-xs-12 col-sm-12 col-md-6 features">
-            <div class="features_icons">
-             <i class="fa fa-check-circle"></i>
+          <div class="col-md-6 m_t_50 m_b_30">
+            <div class="text-center">
+              <i class="fa fa-book feature_icon"></i>
+              <h1 class="feature_head">Cut-Off</h1>
+              <p class="feature_desc">Be updated on what is the current Syllabus, After all "Well Begun is half done!"</p>
             </div>
-            <h1>Cut-off</h1>
-            <p>Be updated on what is the current Syllabus, After all "Well Begun is half done!"</p>
           </div>
-
+        </div>
       </div>
     </div>
-  </div>  
-
-
+  </div>
 
       <h1>I am </h1>
       <h1>Test</h1>
@@ -1005,6 +963,7 @@ $("#closeSearchIcon").on("click", function() {
   $(this).toggleClass("hidden");
   $("#searchIcon").toggleClass("hidden");
 });
+
 </script>
 
 <script type="text/javascript">
