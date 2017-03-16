@@ -325,6 +325,7 @@ body.modal-open {
     overflow-x: hidden;
     overflow-y: auto; 
     margin-bottom: -10px;
+    z-index: 10;
   }
   .side_nav .imp_headings {
     padding-left: 16px;
@@ -360,7 +361,7 @@ body.modal-open {
 
 /* Main Content Starts */
 .main_content{
-  z-index: -1;
+  z-index: 5;
   position: relative;
 }
 @media (min-width: 768px) {
@@ -408,7 +409,7 @@ blockquote p.author {
 }
 .features .feature_head {
   text-transform: uppercase;
-  margin-top: 4px;
+  margin: 0px;
   font-size: 54px;
 }
 .features .feature_icon{
@@ -421,6 +422,19 @@ blockquote p.author {
 }
 .img-thumbnail{
   border: 3px solid #ddd;
+}
+.my_btn{
+  color: #fff;
+  background-color: #4285F4;
+  border-radius: 0px;
+  border-color: #4285F4;
+  padding: 6px 18px;
+}
+.my_btn:hover{
+  color: #fff;
+  background-color: #333;
+  border-color: #333;
+  box-shadow: 2px 6px 10px 0 rgba(0,0,0,0.16),0 6px 10px 0 rgba(0,0,0,0.12) !important;
 }
 
 @media(max-width: 768px){
@@ -829,13 +843,15 @@ blockquote p.author {
           <div class="col-md-6 m_t_50 m_b_30">
             <div class="text-center">
               <i class="fa fa-book feature_icon"></i>
-              <h1 class="feature_head">Syllabus</h1>
-              <p class="feature_desc">Be updated on what is the current Syllabus, After all "Well Begun is half done!"</p>
+              <h1 class="feature_head m_t_10">Syllabus</h1>
+              <p class="feature_desc m_b_20">Be updated on what is the current Syllabus, After all "Well Begun is half done!"</p>
+              <a href="" class="btn btn-default btn-lg my_btn transitionable m_r_5">SBI PO</a>
+              <a href="" class="btn btn-default btn-lg my_btn transitionable m_l_5">SSC CGL</a>
             </div>
           </div>
           <div class="col-md-6 text-center">
             <img class="img-responsive img-thumbnail" src="1.jpg">
-            <p class="feature_desc m_t_5">Be updated on what is the current Syllabus, After all "Well Begun is half done!"</p>
+            <p class="feature_desc">Be updated on what is the current Syllabus, After all "Well Begun is half done!"</p>
           </div>
         </div>
       </div>
@@ -848,13 +864,15 @@ blockquote p.author {
         <div class="features clearfix">
           <div class="col-md-6 text-center">
             <img class="img-responsive img-thumbnail" src="Capture.PNG">
-            <p class="feature_desc m_t_5">Be updated on what is the current Syllabus, After all "Well Begun is half done!"</p>
+            <p class="feature_desc">Be updated on what is the current Syllabus, After all "Well Begun is half done!"</p>
           </div>
           <div class="col-md-6 m_t_50 m_b_30">
             <div class="text-center">
-              <i class="fa fa-book feature_icon"></i>
-              <h1 class="feature_head">Cut-Off</h1>
-              <p class="feature_desc">Be updated on what is the current Syllabus, After all "Well Begun is half done!"</p>
+              <i class="fa fa-line-chart feature_icon"></i>
+              <h1 class="feature_head m_t_10">Cut-Off</h1>
+              <p class="feature_desc m_b_20">Be updated on what is the current Syllabus, After all "Well Begun is half done!"</p>
+              <a href="" class="btn btn-default btn-lg my_btn transitionable m_r_5">IBPS SO</a>
+              <a href="" class="btn btn-default btn-lg my_btn transitionable m_l_5">RRB NTPC</a>
             </div>
           </div>
         </div>
@@ -934,7 +952,6 @@ function scrolltop() {
 
 <script type="text/javascript">
 $(window).scroll(function(){
-  console.log($(this).scrollTop());
   if($(this).scrollTop() > 68) {
     $("#fixNavbar").addClass("fix_navbar");
     $("#mainContent").css("paddingTop", "50px");
