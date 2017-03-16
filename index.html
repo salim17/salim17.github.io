@@ -381,10 +381,10 @@ blockquote {
   quotes: "\201C""\201D""\2018""\2019";
   margin-bottom: 0px;
 }
-blockquote p.career_quote {
+blockquote p {
   font-size: 18px;
 }
-blockquote p.career_quote:before { 
+blockquote p:before { 
     content: "\201C";
     position: absolute;
     left: 10px;
@@ -392,15 +392,15 @@ blockquote p.career_quote:before {
     font-weight: bold;
     font-size: 48px;
     color: #bbb;
-} 
-blockquote p.career_quote:after {
-  
+}
+blockquote p.fixQuote:before { 
+    top: 45px;
 }
 blockquote p.author {
   font-size: 16px;
 }
 @media (max-width: 768px) {
-  blockquote p.career_quote:before {
+  blockquote p:before {
     left: 10px;
   }
 }
@@ -999,9 +999,11 @@ $(window).scroll(function(){
   if($(this).scrollTop() > 68) {
     $("#fixNavbar").addClass("fix_navbar");
     $("#mainContent").css("paddingTop", "50px");
+    $("blockquote").find("p").eq(0).addClass("fixQuote");
   } else {
     $("#fixNavbar").removeClass("fix_navbar");
     $("#mainContent").css("paddingTop", "0px");
+    $("blockquote").find("p").eq(0).removeClass("fixQuote");
   }
 });
 $(".my_nav > li > a").on("click", function() {
