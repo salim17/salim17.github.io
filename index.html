@@ -1028,7 +1028,13 @@ $("#closeSearchIcon").on("click", function() {
   $(this).toggleClass("hidden");
   $("#searchIcon").toggleClass("hidden");
 });
-$(".logo h2").animate({paddingLeft: '0px', opacity: '1'},750);
+$(document).ready(function(){
+  $(".logo h2").animate(
+    { paddingLeft: '0px', 
+      opacity: '1'
+    },750);
+});
+
 
 </script>
 
