@@ -425,6 +425,11 @@ blockquote p.author {
 .img-thumbnail{
   border: 3px solid #ddd;
 }
+.btn-default:active:focus {
+  color: #ffffff; 
+  background-color: #333; 
+  border-color: #333;
+}
 .my_btn{
   color: #fff;
   background-color: #4285F4;
@@ -865,8 +870,8 @@ blockquote p.author {
       <div class="row">
         <div class="features clearfix">
           <div class="col-md-6 text-center">
-            <img class="img-responsive img-thumbnail" src="Capture.PNG">
-            <p class="feature_desc">Be updated on what is the current Syllabus, After all "Well Begun is half done!"</p>
+            <img class="img-responsive img-thumbnail" src="chart.PNG">
+            <p class="feature_desc">Interactive charts to quickly examine the cutoff over the years</p>
           </div>
           <div class="col-md-6 m_t_50 m_b_30">
             <div class="text-center">
@@ -967,7 +972,7 @@ function scrolltop() {
 
 
 <script type="text/javascript">
-$(window).scroll(function(){
+$(window).scroll(function() {
   if($(this).scrollTop() > 68) {
     $("#fixNavbar").addClass("fix_navbar");
     $("#mainContent").css("paddingTop", "50px");
@@ -984,7 +989,7 @@ $(".my_nav > li > a").on("click", function() {
   $(this).parent().siblings().filter(".dropdown.open").children("a").children().toggleClass("hidden");
   $(this).parent().siblings().filter(".dropdown.open").removeClass("open");
 });
-$("ul.dropdown-menu > span").on("click", function(){
+$("ul.dropdown-menu > span").on("click", function() {
   $(this).parents("li").removeClass("open");
   $(this).parents("li").children("a").children().toggleClass("hidden");
 });
@@ -998,7 +1003,7 @@ $("#closeSearchIcon").on("click", function() {
   $(this).toggleClass("hidden");
   $("#searchIcon").toggleClass("hidden");
 });
-$(document).ready(function(){
+$(document).ready(function() {
   $(".logo h2").animate(
     { paddingLeft: '0px', 
       opacity: '1'},750);
